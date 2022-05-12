@@ -11,9 +11,11 @@
     <style>
       .engineering-survey .big-one-image {
         background-image: url("../images/engineering-survey/engineering-survey.jpg");
+        background-position: center -10px;
+        display: flex;
+        align-items: center;
       }
       .engineering-survey .big-one-image__content {
-        padding: 184px 20px 188px 0px;
         display: block;
       }
       .engineering-survey .big-one-image::after {
@@ -36,21 +38,17 @@
       }
       .engineering-survey .big-one-image p {
         margin: 24px 0 36px;
-      }
-      .engineering-survey .main-text__info {
-        height: 530px;
-      }
-      .engineering-survey .main-text__info.active {
-        height: auto;
+        max-width: 745px;
       }
       @media (max-width: 1200px) {
-        .engineering-survey .big-one-image__content {
-          padding: 37px 10px 37px 0px;
-        }
         .engineering-survey .big-one-image p {
-          max-width: 85%;
+          max-width: 600px;
           margin: 12px 0 24px;
         }
+        .engineering-survey .big-one-image {
+          background-position: center -42px;
+          background-size: 184%;
+        }
         .engineering-survey .big-one-image::after {
           background: linear-gradient(
             90deg,
@@ -61,33 +59,13 @@
           );
         }
       }
-      @media (max-width: 767px) {
-        .engineering-survey .big-one-image__content {
-          padding: 30px 10px 30px 0px;
-        }
-        .engineering-survey .big-one-image,
-        .engineering-survey .big-one-image::after {
-          height: auto;
+      @media (max-width: 920px) {
+        .engineering-survey .big-one-image {
+          background-position: 0;
+          background-size: cover;
         }
       }
-      @media (max-width: 550px) {
-        .engineering-survey .big-one-image::before {
-          background: linear-gradient(
-            90deg,
-            #000000 -1.22%,
-            rgba(53, 53, 53, 0.67615) 58.85%,
-            rgba(132, 132, 132, 0) 99.59%,
-            rgba(255, 255, 255, 0) 99.6%
-          );
-          content: "";
-          left: 0;
-          right: 0;
-          top: 0;
-          bottom: 0;
-          position: absolute;
-          z-index: 0;
-        }
-      }
+
       @media (max-width: 449px) {
         .engineering-survey .big-one-image {
           margin-bottom: 40px;
@@ -107,7 +85,9 @@
         }
         .engineering-survey .big-one-image .desc-hidden {
           display: block;
-          margin-top: 8px;
+          margin-top: 0;
+          position: relative;
+          top: 20px;
         }
         .engineering-survey .big-one-image::after {
           background: linear-gradient(
@@ -118,23 +98,23 @@
             rgba(255, 255, 255, 0) 99.6%
           );
         }
-        .engineering-survey .big-one-image__content {
-          padding: 30px 10px 16px 0px;
-        }
-        .where-applicable {
-          padding-top: 65px;
+        .big-one-image__content {
+          padding-top: 75px;
         }
         .survey-types {
-          margin-top: 90px;
+          margin-top: 100px;
         }
       }
       @media (max-width: 360px) {
-        .engineering-survey .big-one-image__content {
-          padding: 18px 10px 35px 8px;
-        }
         .engineering-survey .big-one-image,
         .engineering-survey .big-one-image::after {
           height: 180px;
+        }
+      }
+      @media (max-width: 767px) {
+        .back-call,
+        .work-examples {
+          display: none;
         }
       }
     </style>
@@ -156,7 +136,9 @@
                 <li><a href="#">Контакты</a></li>
               </ul>
               <ul class="menu-mobile__item menu-mobile__bottom">
-                <li><a href="#">Наземное лазерное сканирование</a></li>
+                <li>
+                  <a href="#">Наземное лазерное сканирование</a>
+                </li>
                 <li><a href="#">Аэрофотосъемка</a></li>
                 <li><a class="active" href="#">Инженерные изыскания</a></li>
                 <li><a href="#">Картография</a></li>
@@ -206,13 +188,13 @@
               <li><a href="#">Проекты</a></li>
               <li><a href="#">Контакты</a></li>
             </ul>
+            <a class="header__top-number" href="tel:+74956040000"
+              >+7 495 604 0000</a
+            >
             <div class="header__top-info">
               <button class="header__top-btn call-back-btn" type="button">
                 Обратный звонок
               </button>
-              <a class="header__top-number" href="tel:+74956040000"
-                >+7 495 604 0000</a
-              >
             </div>
             <form action="#">
               <button class="search-btn">
@@ -249,9 +231,10 @@
               <li><a href="#">Аэрофотосъёмка</a></li>
               <li><a class="active" href="#">Инженерные изыскания</a></li>
               <li><a href="#">Картография</a></li>
-              <li><a href="#">Землеутсройство</a></li>
+              <li><a href="#">Землеустройство</a></li>
             </ul>
-            <form action="#">
+            <form class="header__bottom-search" action="#">
+              <input type="text" placeholder="Поиск" />
               <button class="search-btn" type="submit">
                 <svg
                   width="21"
@@ -262,7 +245,7 @@
                 >
                   <path
                     d="M20 20L15.514 15.506L20 20ZM18 9.5C18 11.7543 17.1045 13.9163 15.5104 15.5104C13.9163 17.1045 11.7543 18 9.5 18C7.24566 18 5.08365 17.1045 3.48959 15.5104C1.89553 13.9163 1 11.7543 1 9.5C1 7.24566 1.89553 5.08365 3.48959 3.48959C5.08365 1.89553 7.24566 1 9.5 1C11.7543 1 13.9163 1.89553 15.5104 3.48959C17.1045 5.08365 18 7.24566 18 9.5V9.5Z"
-                    stroke="#999999"
+                    stroke="#D2D2D2"
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
@@ -277,24 +260,22 @@
 
     <main class="main">
       <section class="big-one-image">
-        <div>
-          <div class="container">
-            <div class="big-one-image__content">
-              <h1>Инженерные изыскания</h1>
-              <p>
-                Инженерно-геологические изыскания, проводимые нашей компанией,
-                включают в себя бурение инженерно-геологических скважин, полевое
-                исследование грунтов и их испытание, проведение геофизических и
-                гидрогеологических изысканий и многое другое.
-              </p>
-              <button class="btn calculate-project__btn tablet-hidden">
-                Рассчитать смету проекта
-              </button>
-            </div>
-            <button class="btn calculate-project__btn desc-hidden">
+        <div class="container">
+          <div class="big-one-image__content">
+            <h1>Инженерные изыскания</h1>
+            <p>
+              Инженерно-геологические изыскания, проводимые нашей компанией,
+              включают в себя бурение инженерно-геологических скважин, полевое
+              исследование грунтов и их испытание, проведение геофизических и
+              гидрогеологических изысканий и многое другое.
+            </p>
+            <button class="btn calculate-project__btn tablet-hidden">
               Рассчитать смету проекта
             </button>
           </div>
+          <button class="btn calculate-project__btn desc-hidden">
+            Рассчитать смету проекта
+          </button>
         </div>
       </section>
       <section class="survey-types">

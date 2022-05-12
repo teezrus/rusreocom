@@ -13,11 +13,12 @@
         background: url("../images/aerial-photography/animal-count.jpg")
           no-repeat right;
         background-position: 125px 0px;
-        padding: 102px 20px 102px 32px;
+        display: flex;
+        align-items: center;
       }
       .last-page.animal-count .first-block__inner h1 {
-        margin-bottom: 16px;
-        max-width: 590px;
+        margin-bottom: 32px;
+        max-width: 650px;
       }
       .last-page.animal-count .first-block__inner p {
         max-width: 965px;
@@ -32,7 +33,6 @@
       }
       @media (max-width: 1200px) {
         .last-page.animal-count .first-block__inner {
-          padding: 44px 20px 44px 32px;
           background-position: -55px -33px;
           background-size: 159%;
         }
@@ -65,7 +65,6 @@
           );
         }
         .last-page.animal-count .first-block__inner {
-          padding: 68px 20px 68px 32px;
           background-position: -172px -15px;
           background-size: 238%;
         }
@@ -73,11 +72,14 @@
       @media (max-width: 449px) {
         .last-page.animal-count .first-block__inner h1 {
           margin-bottom: 0;
-          max-width: 272px;
+          max-width: 292px;
         }
         .last-page.animal-count .first-block__inner {
           background-position: -107px 0px;
           background-size: 220%;
+        }
+        .last-page.aerial-photography .main-text {
+          margin-top: 100px;
         }
       }
     </style>
@@ -148,13 +150,13 @@
               <li><a href="#">Проекты</a></li>
               <li><a href="#">Контакты</a></li>
             </ul>
+            <a class="header__top-number" href="tel:+74956040000"
+              >+7 495 604 0000</a
+            >
             <div class="header__top-info">
               <button class="header__top-btn call-back-btn" type="button">
                 Обратный звонок
               </button>
-              <a class="header__top-number" href="tel:+74956040000"
-                >+7 495 604 0000</a
-              >
             </div>
             <form action="#">
               <button class="search-btn">
@@ -185,15 +187,16 @@
               <li>
                 <a href="#"
                   ><span class="hidden">Наземное </span>
-                  <span class="capitalize">лазерное</span> сканирование</a
+                  <span class="capitalize">Лазерное</span> сканирование</a
                 >
               </li>
               <li><a class="active" href="#">Аэрофотосъёмка</a></li>
               <li><a href="#">Инженерные изыскания</a></li>
               <li><a href="#">Картография</a></li>
-              <li><a href="#">Землеутсройство</a></li>
+              <li><a href="#">Землеустройство</a></li>
             </ul>
-            <form action="#">
+            <form class="header__bottom-search" action="#">
+              <input type="text" placeholder="Поиск" />
               <button class="search-btn" type="submit">
                 <svg
                   width="21"
@@ -204,7 +207,7 @@
                 >
                   <path
                     d="M20 20L15.514 15.506L20 20ZM18 9.5C18 11.7543 17.1045 13.9163 15.5104 15.5104C13.9163 17.1045 11.7543 18 9.5 18C7.24566 18 5.08365 17.1045 3.48959 15.5104C1.89553 13.9163 1 11.7543 1 9.5C1 7.24566 1.89553 5.08365 3.48959 3.48959C5.08365 1.89553 7.24566 1 9.5 1C11.7543 1 13.9163 1.89553 15.5104 3.48959C17.1045 5.08365 18 7.24566 18 9.5V9.5Z"
-                    stroke="#999999"
+                    stroke="#D2D2D2"
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
@@ -349,7 +352,7 @@
               <button class="desc-hidden">Смотреть все</button>
             </div>
             <div class="work-examples__items">
-              <div class="work-examples__item">
+              <a class="work-examples__item" href="#">
                 <img
                   src="../images/aerial-photography/work-examples-item-1.jpg"
                   alt=""
@@ -364,8 +367,8 @@
                   С помощью БПЛА Supercam S350 и GPS- приёмника Trimble R10
                   получены ортофотоплан и топографический план
                 </p>
-              </div>
-              <div class="work-examples__item">
+              </a>
+              <a class="work-examples__item" href="#">
                 <img
                   src="../images/aerial-photography/work-examples-item-2.jpg"
                   alt=""
@@ -384,8 +387,10 @@
                   Произведены аэрофото- и видеосъемочные работы храма для
                   получения панорамных снимков и видео
                 </p>
-              </div>
-              <div class="work-examples__item">
+              </a>
+            </div>
+            <div class="work-examples__items">
+              <a class="work-examples__item" href="#">
                 <img
                   src="../images/aerial-photography/work-examples-item-3.jpg"
                   alt=""
@@ -401,8 +406,8 @@
                   С помощью квадрокоптера DJI Matrice 300 RTK были произведены
                   аэрофотосъемочные и видеосъемочные работы
                 </p>
-              </div>
-              <div class="work-examples__item">
+              </a>
+              <a class="work-examples__item" href="#">
                 <img
                   src="../images/aerial-photography/work-examples-item-4.jpg"
                   alt=""
@@ -417,7 +422,7 @@
                   С помощью БПЛА Supercam S350 и GPS- приёмника Trimble R10 были
                   получен ортофотоплан для выполнения кадастровых работ.
                 </p>
-              </div>
+              </a>
             </div>
           </div>
         </div>

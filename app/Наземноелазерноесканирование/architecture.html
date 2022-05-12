@@ -13,11 +13,12 @@
         background: url("../images/first/architecture.jpg") no-repeat right;
         background-position: 20% 2%;
         background-size: 150%;
-        padding: 102px 20px 102px 32px;
+        display: flex;
+        align-items: center;
       }
       .architecture .first-block__inner h1 {
         margin-bottom: 32px;
-        max-width: 580px;
+        max-width: 600px;
       }
       .architecture .first-block__inner::after {
         background: linear-gradient(
@@ -29,7 +30,6 @@
       }
       @media (max-width: 1200px) {
         .architecture .first-block__inner {
-          padding: 48px 20px 44px 32px;
           background-position: -10% 4%;
           background-size: 109%;
         }
@@ -64,9 +64,8 @@
         .architecture .first-block__inner {
           background-position: 0 0;
           background-size: 115%;
-          padding: 68px 20px 68px 32px;
         }
-      } ;
+      }
     </style>
   </head>
   <body class="architecture">
@@ -137,13 +136,13 @@
               <li><a href="#">Проекты</a></li>
               <li><a href="#">Контакты</a></li>
             </ul>
+            <a class="header__top-number" href="tel:+74956040000"
+              >+7 495 604 0000</a
+            >
             <div class="header__top-info">
               <button class="header__top-btn call-back-btn" type="button">
                 Обратный звонок
               </button>
-              <a class="header__top-number" href="tel:+74956040000"
-                >+7 495 604 0000</a
-              >
             </div>
             <form action="#">
               <button class="search-btn">
@@ -174,15 +173,16 @@
               <li>
                 <a class="active" href="#"
                   ><span class="hidden">Наземное </span>
-                  <span class="capitalize">лазерное</span> сканирование</a
+                  <span class="capitalize">Лазерное</span> сканирование</a
                 >
               </li>
               <li><a href="#">Аэрофотосъёмка</a></li>
               <li><a href="#">Инженерные изыскания</a></li>
               <li><a href="#">Картография</a></li>
-              <li><a href="#">Землеутсройство</a></li>
+              <li><a href="#">Землеустройство</a></li>
             </ul>
-            <form action="#">
+            <form class="header__bottom-search" action="#">
+              <input type="text" placeholder="Поиск" />
               <button class="search-btn" type="submit">
                 <svg
                   width="21"
@@ -193,7 +193,7 @@
                 >
                   <path
                     d="M20 20L15.514 15.506L20 20ZM18 9.5C18 11.7543 17.1045 13.9163 15.5104 15.5104C13.9163 17.1045 11.7543 18 9.5 18C7.24566 18 5.08365 17.1045 3.48959 15.5104C1.89553 13.9163 1 11.7543 1 9.5C1 7.24566 1.89553 5.08365 3.48959 3.48959C5.08365 1.89553 7.24566 1 9.5 1C11.7543 1 13.9163 1.89553 15.5104 3.48959C17.1045 5.08365 18 7.24566 18 9.5V9.5Z"
-                    stroke="#999999"
+                    stroke="#D2D2D2"
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
@@ -304,7 +304,7 @@
       </section>
       <section class="services">
         <div class="container">
-          <h2>Услуги</h2>
+          <h2>Услуги лазерного 3D сканирования</h2>
           <div class="services__items">
             <div class="services__item">
               <img src="../images/services/item-1.png" alt="" />
@@ -374,7 +374,7 @@
               <button class="desc-hidden">Смотреть все</button>
             </div>
             <div class="work-examples__items">
-              <div class="work-examples__item">
+              <a class="work-examples__item">
                 <img src="../images/first/architecture-item-1.jpg" alt="" />
                 <h4>Нефтегазовое месторождение</h4>
                 <p class="table-hidden">
@@ -386,8 +386,8 @@
                   Проведены исследовательские работы с помощью лазерного сканера
                   Leica P50 и GPS-приёмниками Topcon GR-3
                 </p>
-              </div>
-              <div class="work-examples__item">
+              </a>
+              <a class="work-examples__item">
                 <img src="../images/first/architecture-item-2.jpg" alt="" />
                 <h4 class="table-hidden">
                   Московские триумфальные ворота в Санкт-Петербурге
@@ -401,8 +401,10 @@
                   Выполнено наземное лазерное сканирование памятника c помощью
                   сканера Leica ScanStation P50
                 </p>
-              </div>
-              <div class="work-examples__item">
+              </a>
+            </div>
+            <div class="work-examples__items">
+              <a class="work-examples__item">
                 <img src="../images/first/architecture-item-3.jpg" alt="" />
                 <h4>Никольский храм</h4>
                 <p class="table-hidden">
@@ -414,8 +416,8 @@
                   Произведена аэрофотосъемка и наземное лазерное сканирование
                   для получения облака точек Никольского храма
                 </p>
-              </div>
-              <div class="work-examples__item">
+              </a>
+              <a class="work-examples__item" href="#">
                 <img src="../images/first/architecture-item-4.jpg" alt="" />
                 <h4>Нефтегазовый комплекс</h4>
                 <p class="table-hidden">
@@ -428,7 +430,7 @@
                   Проведено наземное лазерное сканирование на объекте
                   нефтегазового комплекса для получения 3D-модели
                 </p>
-              </div>
+              </a>
             </div>
           </div>
         </div>

@@ -10,16 +10,19 @@
     <style>
       .our-projects .big-one-image {
         background-image: url("../images/our-projects/our-projects.jpg");
+        background-position: 0;
+        background-size: cover;
+        display: flex;
+        align-items: center;
       }
       .our-projects .big-one-image__content {
-        padding: 257px 20px 257px 0px;
         display: block;
       }
       .our-projects .big-one-image::after {
         background: linear-gradient(
           90deg,
-          #000000 3.28%,
-          rgba(53, 53, 53, 0.67615) 55.07%,
+          #000000 -1.22%,
+          rgba(53, 53, 53, 0.67615) 35.93%,
           rgba(132, 132, 132, 0) 99.59%,
           rgba(255, 255, 255, 0) 99.6%
         );
@@ -33,98 +36,80 @@
       .our-projects .big-one-image .desc-hidden {
         display: none;
       }
-      .our-projects .big-one-image h1 {
-        max-width: 520px;
-      }
       .our-projects .big-one-image p {
-        margin: 30px 0 32px;
-      }
-      .our-projects .main-text__info {
-        height: auto;
+        margin: 24px 0 36px;
+        max-width: 745px;
       }
       @media (max-width: 1200px) {
-        .our-projects .big-one-image__content {
-          padding: 61px 10px 61px 8px;
-        }
         .our-projects .big-one-image p {
-          max-width: 90%;
+          max-width: 600px;
+          margin: 12px 0 24px;
+        }
+        .our-projects .big-one-image {
+          background-position: center -42px;
+          background-size: 184%;
         }
         .our-projects .big-one-image::after {
           background: linear-gradient(
             90deg,
             #000000 -1.22%,
-            rgba(53, 53, 53, 0.67615) 74.21%,
+            rgba(53, 53, 53, 0.67615) 58.85%,
             rgba(132, 132, 132, 0) 99.59%,
             rgba(255, 255, 255, 0) 99.6%
           );
         }
       }
-      @media (max-width: 450px) {
-        .our-projects .big-one-image__content {
-          padding: 80px 10px 80px 8px;
+      @media (max-width: 920px) {
+        .our-projects .big-one-image {
+          background-position: 0;
+          background-size: cover;
+        }
+      }
+
+      @media (max-width: 449px) {
+        .our-projects .big-one-image {
+          margin-bottom: 40px;
         }
         .our-projects .big-one-image,
         .our-projects .big-one-image::after {
           height: 184px;
         }
-        .our-projects .big-one-image {
-          margin-bottom: 170px;
-        }
         .our-projects .big-one-image p {
           max-width: 100%;
-          height: 112px;
+          height: 70px;
           margin-top: 12px;
+          margin-bottom: 50px;
         }
         .our-projects .big-one-image .tablet-hidden {
           display: none;
         }
         .our-projects .big-one-image .desc-hidden {
-          display: block;
-          margin-top: 20px;
-          color: #333333;
+          display: none;
         }
         .our-projects .big-one-image::after {
           background: linear-gradient(
             90deg,
             #000000 -1.22%,
-            rgba(53, 53, 53, 0.67615) 69.7%,
+            rgba(53, 53, 53, 0.67615) 58.85%,
             rgba(132, 132, 132, 0) 99.59%,
             rgba(255, 255, 255, 0) 99.6%
           );
         }
+        .big-one-image__content {
+          padding-top: 0px;
+        }
       }
       @media (max-width: 360px) {
-        .our-projects .big-one-image__content {
-          padding: 80px 10px 100px 8px;
-        }
         .our-projects .big-one-image,
         .our-projects .big-one-image::after {
-          height: 220px;
+          height: 180px;
         }
       }
-
-      a {
-        text-decoration: none;
-      }
-      .text-info {
-        color: #31708f;
-      }
-
-      /*Pagination CSS*/
-      #page_navigation {
-        clear: both;
-        margin: 20px 0;
-      }
-      #page_navigation a {
-        padding: 3px 6px;
-        border: 1px solid #2e6da4;
-        margin: 2px;
-        color: black;
-        text-decoration: none;
-      }
-      .active_page {
-        background: #337ab7;
-        color: white !important;
+      @media (max-width: 767px) {
+        .back-call,
+        .work-examples {
+          display: none;
+        }
       }
     </style>
   </head>
@@ -141,11 +126,13 @@
               <ul class="menu-mobile__item menu-mobile__top">
                 <li><a href="#">О компании</a></li>
                 <li><a href="#">Лицензии и заказчики</a></li>
-                <li><a href="#">Проекты</a></li>
+                <li><a class="active" href="#">Проекты</a></li>
                 <li><a href="#">Контакты</a></li>
               </ul>
               <ul class="menu-mobile__item menu-mobile__bottom">
-                <li><a href="#">Наземное лазерное сканирование</a></li>
+                <li>
+                  <a href="#">Наземное лазерное сканирование</a>
+                </li>
                 <li><a href="#">Аэрофотосъемка</a></li>
                 <li><a href="#">Инженерные изыскания</a></li>
                 <li><a href="#">Картография</a></li>
@@ -192,16 +179,16 @@
             <ul class="header__top-menu">
               <li><a href="#"> О компании</a></li>
               <li><a href="#">Лицензии и заказчики</a></li>
-              <li class="active"><a href="#">Проекты</a></li>
+              <li><a class="active" href="#">Проекты</a></li>
               <li><a href="#">Контакты</a></li>
             </ul>
+            <a class="header__top-number" href="tel:+74956040000"
+              >+7 495 604 0000</a
+            >
             <div class="header__top-info">
               <button class="header__top-btn call-back-btn" type="button">
                 Обратный звонок
               </button>
-              <a class="header__top-number" href="tel:+74956040000"
-                >+7 495 604 0000</a
-              >
             </div>
             <form action="#">
               <button class="search-btn">
@@ -238,9 +225,10 @@
               <li><a href="#">Аэрофотосъёмка</a></li>
               <li><a href="#">Инженерные изыскания</a></li>
               <li><a href="#">Картография</a></li>
-              <li><a href="#">Землеутсройство</a></li>
+              <li><a href="#">Землеустройство</a></li>
             </ul>
-            <form action="#">
+            <form class="header__bottom-search" action="#">
+              <input type="text" placeholder="Поиск" />
               <button class="search-btn" type="submit">
                 <svg
                   width="21"
@@ -251,7 +239,7 @@
                 >
                   <path
                     d="M20 20L15.514 15.506L20 20ZM18 9.5C18 11.7543 17.1045 13.9163 15.5104 15.5104C13.9163 17.1045 11.7543 18 9.5 18C7.24566 18 5.08365 17.1045 3.48959 15.5104C1.89553 13.9163 1 11.7543 1 9.5C1 7.24566 1.89553 5.08365 3.48959 3.48959C5.08365 1.89553 7.24566 1 9.5 1C11.7543 1 13.9163 1.89553 15.5104 3.48959C17.1045 5.08365 18 7.24566 18 9.5V9.5Z"
-                    stroke="#999999"
+                    stroke="#D2D2D2"
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
@@ -266,27 +254,25 @@
 
     <main class="main">
       <section class="big-one-image">
-        <div>
-          <div class="container">
-            <div class="big-one-image__content">
-              <h1>Наши проекты</h1>
-              <p class="tablet-hidden">
-                Компания «РУСГЕОКОМ» обладает всем необходимым для проведения
-                сложных геодезических работ. Штат компании укомплектован
-                высококвалифицированными специалистами, имеющими достаточный
-                опыт для проведения работ любой сложности, а материальная база
-                представлена новейшим оборудованием ведущих мировых
-                производителей.
-              </p>
-            </div>
-            <p class="desc-hidden">
+        <div class="container">
+          <div class="big-one-image__content">
+            <h1>Наши проекты</h1>
+            <p class="tablet-hidden">
               Компания «РУСГЕОКОМ» обладает всем необходимым для проведения
               сложных геодезических работ. Штат компании укомплектован
               высококвалифицированными специалистами, имеющими достаточный опыт
               для проведения работ любой сложности, а материальная база
-              представлена новейшим оборудованием ведущих мировых производителей
+              представлена новейшим оборудованием ведущих мировых
+              производителей.
             </p>
           </div>
+          <p class="desc-hidden">
+            Компания «РУСГЕОКОМ» обладает всем необходимым для проведения
+            сложных геодезических работ. Штат компании укомплектован
+            высококвалифицированными специалистами, имеющими достаточный опыт
+            для проведения работ любой сложности, а материальная база
+            представлена новейшим оборудованием ведущих мировых производителей
+          </p>
         </div>
       </section>
       <section class="completed-projects">
@@ -313,7 +299,7 @@
               <a class="filter__all" href="#all"> Все проекты </a>
             </div>
             <div class="completed-projects__items">
-              <div
+              <a
                 class="completed-projects__item"
                 data-tags="terrestrial-scanning all"
               >
@@ -335,9 +321,11 @@
                   Выполнено наземное лазерное сканирование помещений офисного
                   здания в рамках капитального ремонта
                 </p>
-                <a class="completed-projects__btn" href="#">Подробнее</a>
-              </div>
-              <div
+                <button class="completed-projects__btn" href="#">
+                  Подробнее
+                </button>
+              </a>
+              <a
                 class="completed-projects__item"
                 data-tags="aerial-photography all"
               >
@@ -361,9 +349,11 @@
                   Произведены аэрофото- и видеосъемочные работы храма для
                   получения панорамных снимков и видео
                 </p>
-                <a class="completed-projects__btn" href="#">Подробнее</a>
-              </div>
-              <div
+                <button class="completed-projects__btn" href="#">
+                  Подробнее
+                </button>
+              </a>
+              <a
                 class="completed-projects__item"
                 data-tags="aerial-photography all"
               >
@@ -386,9 +376,11 @@
                   Произведена аэрофотосъемка и наземное лазерное сканирование
                   для получения облака точек Никольского храма
                 </p>
-                <a class="completed-projects__btn" href="#">Подробнее</a>
-              </div>
-              <div
+                <button class="completed-projects__btn" href="#">
+                  Подробнее
+                </button>
+              </a>
+              <a
                 class="completed-projects__item"
                 data-tags="terrestrial-scanning all"
               >
@@ -411,9 +403,11 @@
                   Проведено наземное лазерное сканирование на объекте
                   нефтегазового комплекса для получения 3D-модели
                 </p>
-                <a class="completed-projects__btn" href="#">Подробнее</a>
-              </div>
-              <div
+                <button class="completed-projects__btn" href="#">
+                  Подробнее
+                </button>
+              </a>
+              <a
                 class="completed-projects__item"
                 data-tags="terrestrial-scanning all"
               >
@@ -436,9 +430,11 @@
                   Произведено наземное лазерное сканирование складских
                   помещений, получены обмерные чертежи и 3D-модель
                 </p>
-                <a class="completed-projects__btn" href="#">Подробнее</a>
-              </div>
-              <div
+                <button class="completed-projects__btn" href="#">
+                  Подробнее
+                </button>
+              </a>
+              <a
                 class="completed-projects__item"
                 data-tags="terrestrial-scanning all"
               >
@@ -460,9 +456,11 @@
                   Выполнено наземное лазерное сканирование памятника c помощью
                   сканера Leica ScanStation P50
                 </p>
-                <a class="completed-projects__btn" href="#">Подробнее</a>
-              </div>
-              <div
+                <button class="completed-projects__btn" href="#">
+                  Подробнее
+                </button>
+              </a>
+              <a
                 class="completed-projects__item"
                 data-tags="aerial-photography all"
               >
@@ -486,9 +484,11 @@
                   С помощью квадрокоптера DJI Matrice 300 RTK были произведены
                   аэрофотосъемочные и видеосъемочные работы
                 </p>
-                <a class="completed-projects__btn" href="#">Подробнее</a>
-              </div>
-              <div
+                <button class="completed-projects__btn" href="#">
+                  Подробнее
+                </button>
+              </a>
+              <a
                 class="completed-projects__item"
                 data-tags="aerial-photography all"
               >
@@ -512,9 +512,11 @@
                   С помощью квадрокоптера DJI Phantom 4 RTK были произведены
                   аэрофото- и видеосъемочные работы
                 </p>
-                <a class="completed-projects__btn" href="#">Подробнее</a>
-              </div>
-              <div
+                <button class="completed-projects__btn" href="#">
+                  Подробнее
+                </button>
+              </a>
+              <a
                 class="completed-projects__item"
                 data-tags="aerial-photography all"
               >
@@ -537,9 +539,11 @@
                   С помощью БПЛА Supercam S350 и GPS- приёмника Trimble R10 были
                   получен ортофотопландля выполнения кадастровых работ.
                 </p>
-                <a class="completed-projects__btn" href="#">Подробнее</a>
-              </div>
-              <div
+                <button class="completed-projects__btn" href="#">
+                  Подробнее
+                </button>
+              </a>
+              <a
                 class="completed-projects__item"
                 data-tags="aerial-photography terrestrial-scanning all"
               >
@@ -562,9 +566,11 @@
                   Проведены исследовательские работы с помощью лазерного сканера
                   Leica P50 и GPS-приёмниками Topcon GR-3
                 </p>
-                <a class="completed-projects__btn" href="#">Подробнее</a>
-              </div>
-              <div
+                <button class="completed-projects__btn" href="#">
+                  Подробнее
+                </button>
+              </a>
+              <a
                 class="completed-projects__item"
                 data-tags="aerial-photography all"
               >
@@ -587,9 +593,11 @@
                   С помощью БПЛА Supercam S350 и GPS- приёмника Trimble R10
                   получены ортофотоплан и топографический план
                 </p>
-                <a class="completed-projects__btn" href="#">Подробнее</a>
-              </div>
-              <div
+                <button class="completed-projects__btn" href="#">
+                  Подробнее
+                </button>
+              </a>
+              <a
                 class="completed-projects__item"
                 data-tags="aerial-photography all"
               >
@@ -612,8 +620,10 @@
                   С помощью БПЛА Supercam S350 и GPS- приёмника Trimble R10
                   получен топографический план масштаба 1:500
                 </p>
-                <a class="completed-projects__btn" href="#">Подробнее</a>
-              </div>
+                <button class="completed-projects__btn" href="#">
+                  Подробнее
+                </button>
+              </a>
             </div>
             <div class="completed-projects__show-more">Показать ещё</div>
             <div class="pagination">

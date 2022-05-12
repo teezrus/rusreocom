@@ -14,13 +14,14 @@
       .last-page.engineering-hydrometeo .first-block__inner {
         background: url("../images/engineering-survey/engineering-hydrometeo.jpg")
           no-repeat right;
-        background-position: 122px -237px;
+        background-position: 160px -237px;
         background-size: auto;
-        padding: 100px 20px 104px 32px;
+        display: flex;
+        align-items: center;
       }
       .last-page.engineering-hydrometeo .first-block__inner h1 {
         margin-bottom: 32px;
-        max-width: 850px;
+        max-width: 900px;
       }
       .last-page.engineering-hydrometeo .first-block__inner::after {
         background: linear-gradient(
@@ -32,7 +33,6 @@
       }
       @media (max-width: 1200px) {
         .last-page.engineering-hydrometeo .first-block__inner {
-          padding: 44px 20px 44px 32px;
           background-position: 121px -145px;
           background-size: 89%;
         }
@@ -44,11 +44,14 @@
             rgba(255, 255, 255, 0) 99.6%
           );
         }
+        .last-page.engineering-hydrometeo .first-block__inner h1 {
+          margin-bottom: 16px;
+          max-width: 900px;
+        }
       }
       @media (max-width: 920px) {
         .last-page.engineering-hydrometeo .first-block__inner {
-          padding: 44px 20px 44px 32px;
-          background-position: 84px -103px;
+          background-position: 97px -103px;
           background-size: 89%;
         }
         .last-page.engineering-hydrometeo .first-block__inner::after {
@@ -62,7 +65,6 @@
       }
       @media (max-width: 767px) {
         .last-page.engineering-hydrometeo .first-block__inner {
-          padding: 44px 20px 44px 32px;
           background-position: 84px -130px;
           background-size: 132%;
         }
@@ -79,12 +81,14 @@
       }
       @media (max-width: 449px) {
         .last-page.engineering-hydrometeo .first-block__inner {
-          padding: 44px 20px 44px 32px;
           background-position: 61px -69px;
         }
 
         .last-page.engineering-hydrometeo .first-block__inner h1 {
           margin-bottom: 0;
+        }
+        .info-tabs {
+          margin-top: 100px;
         }
       } ;
     </style>
@@ -105,7 +109,9 @@
                 <li><a href="#">Контакты</a></li>
               </ul>
               <ul class="menu-mobile__item menu-mobile__bottom">
-                <li><a href="#">Наземное лазерное сканирование</a></li>
+                <li>
+                  <a href="#">Наземное лазерное сканирование</a>
+                </li>
                 <li><a href="#">Аэрофотосъемка</a></li>
                 <li><a class="active" href="#">Инженерные изыскания</a></li>
                 <li><a href="#">Картография</a></li>
@@ -155,13 +161,13 @@
               <li><a href="#">Проекты</a></li>
               <li><a href="#">Контакты</a></li>
             </ul>
+            <a class="header__top-number" href="tel:+74956040000"
+              >+7 495 604 0000</a
+            >
             <div class="header__top-info">
               <button class="header__top-btn call-back-btn" type="button">
                 Обратный звонок
               </button>
-              <a class="header__top-number" href="tel:+74956040000"
-                >+7 495 604 0000</a
-              >
             </div>
             <form action="#">
               <button class="search-btn">
@@ -192,15 +198,16 @@
               <li>
                 <a href="#"
                   ><span class="hidden">Наземное </span>
-                  <span class="capitalize">лазерное</span> сканирование</a
+                  <span class="capitalize">Лазерное</span> сканирование</a
                 >
               </li>
               <li><a href="#">Аэрофотосъёмка</a></li>
               <li><a class="active" href="#">Инженерные изыскания</a></li>
               <li><a href="#">Картография</a></li>
-              <li><a href="#">Землеутсройство</a></li>
+              <li><a href="#">Землеустройство</a></li>
             </ul>
-            <form action="#">
+            <form class="header__bottom-search" action="#">
+              <input type="text" placeholder="Поиск" />
               <button class="search-btn" type="submit">
                 <svg
                   width="21"
@@ -211,7 +218,7 @@
                 >
                   <path
                     d="M20 20L15.514 15.506L20 20ZM18 9.5C18 11.7543 17.1045 13.9163 15.5104 15.5104C13.9163 17.1045 11.7543 18 9.5 18C7.24566 18 5.08365 17.1045 3.48959 15.5104C1.89553 13.9163 1 11.7543 1 9.5C1 7.24566 1.89553 5.08365 3.48959 3.48959C5.08365 1.89553 7.24566 1 9.5 1C11.7543 1 13.9163 1.89553 15.5104 3.48959C17.1045 5.08365 18 7.24566 18 9.5V9.5Z"
-                    stroke="#999999"
+                    stroke="#D2D2D2"
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"

@@ -10,9 +10,11 @@
     <style>
       .terrestrial-scanning .big-one-image {
         background-image: url("images/terrestrial-scanning.png");
+        background-position: center 10px;
+        display: flex;
+        align-items: center;
       }
       .terrestrial-scanning .big-one-image__content {
-        padding: 184px 20px 188px 0px;
         display: block;
       }
       .terrestrial-scanning .big-one-image::after {
@@ -34,14 +36,16 @@
       }
       .terrestrial-scanning .big-one-image p {
         margin: 24px 0 36px;
+        max-width: 745px;
       }
       @media (max-width: 1200px) {
-        .terrestrial-scanning .big-one-image__content {
-          padding: 37px 10px 37px 0px;
-        }
         .terrestrial-scanning .big-one-image p {
           max-width: 430px;
           margin: 12px 0 24px;
+        }
+        .terrestrial-scanning .big-one-image {
+          background-position: center -42px;
+          background-size: 184%;
         }
         .terrestrial-scanning .big-one-image::after {
           background: linear-gradient(
@@ -57,13 +61,16 @@
           display: none;
         }
       }
-      @media (max-width: 767px) {
-        .terrestrial-scanning .big-one-image__content {
-          padding: 30px 10px 30px 0px;
+      @media (max-width: 920px) {
+        .terrestrial-scanning .big-one-image {
+          background-position: center -22px;
+          background-size: 214%;
         }
-        .terrestrial-scanning .big-one-image,
-        .terrestrial-scanning .big-one-image::after {
-          height: auto;
+      }
+      @media (max-width: 600px) {
+        .terrestrial-scanning .big-one-image {
+          background-position: center -22px;
+          background-size: 284%;
         }
       }
       @media (max-width: 550px) {
@@ -113,9 +120,6 @@
         }
       }
       @media (max-width: 360px) {
-        .terrestrial-scanning .big-one-image__content {
-          padding: 18px 10px 35px 8px;
-        }
         .terrestrial-scanning .big-one-image,
         .terrestrial-scanning .big-one-image::after {
           height: 180px;
@@ -196,13 +200,13 @@
               <li><a href="#">Проекты</a></li>
               <li><a href="#">Контакты</a></li>
             </ul>
+            <a class="header__top-number" href="tel:+74956040000"
+              >+7 495 604 0000</a
+            >
             <div class="header__top-info">
               <button class="header__top-btn call-back-btn" type="button">
                 Обратный звонок
               </button>
-              <a class="header__top-number" href="tel:+74956040000"
-                >+7 495 604 0000</a
-              >
             </div>
             <form action="#">
               <button class="search-btn">
@@ -241,7 +245,8 @@
               <li><a href="#">Картография</a></li>
               <li><a href="#">Землеустройство</a></li>
             </ul>
-            <form action="#">
+            <form class="header__bottom-search" action="#">
+              <input type="text" placeholder="Поиск" />
               <button class="search-btn" type="submit">
                 <svg
                   width="21"
@@ -252,7 +257,7 @@
                 >
                   <path
                     d="M20 20L15.514 15.506L20 20ZM18 9.5C18 11.7543 17.1045 13.9163 15.5104 15.5104C13.9163 17.1045 11.7543 18 9.5 18C7.24566 18 5.08365 17.1045 3.48959 15.5104C1.89553 13.9163 1 11.7543 1 9.5C1 7.24566 1.89553 5.08365 3.48959 3.48959C5.08365 1.89553 7.24566 1 9.5 1C11.7543 1 13.9163 1.89553 15.5104 3.48959C17.1045 5.08365 18 7.24566 18 9.5V9.5Z"
-                    stroke="#999999"
+                    stroke="#D2D2D2"
                     stroke-width="2"
                     stroke-linecap="round"
                     stroke-linejoin="round"
@@ -376,7 +381,7 @@
       </section>
       <section class="services">
         <div class="container">
-          <h2>Услуги</h2>
+          <h2>Услуги лазерного 3D сканирования</h2>
           <div class="services__items">
             <div class="services__item">
               <img src="images/services/item-1.png" alt="" />
@@ -446,7 +451,7 @@
               <button class="desc-hidden">Смотреть все</button>
             </div>
             <div class="work-examples__items">
-              <div class="work-examples__item">
+              <a class="work-examples__item" href="#">
                 <img src="images/work-examples/item-1.jpg" alt="" />
                 <h4>Нефтегазовое месторождение</h4>
                 <p class="table-hidden">
@@ -458,8 +463,8 @@
                   Проведены исследовательские работы с помощью лазерного сканера
                   Leica P50 и GPS-приёмниками Topcon GR-3
                 </p>
-              </div>
-              <div class="work-examples__item">
+              </a>
+              <a class="work-examples__item" href="#">
                 <img src="images/work-examples/item-2.jpg" alt="" />
                 <h4 class="table-hidden">
                   Московские триумфальные ворота в Санкт-Петербурге
@@ -473,8 +478,10 @@
                   Выполнено наземное лазерное сканирование памятника c помощью
                   сканера Leica ScanStation P50
                 </p>
-              </div>
-              <div class="work-examples__item">
+              </a>
+            </div>
+            <div class="work-examples__items">
+              <a class="work-examples__item" href="#">
                 <img src="images/work-examples/item-3.jpg" alt="" />
                 <h4>Никольский храм</h4>
                 <p class="table-hidden">
@@ -486,8 +493,8 @@
                   Произведена аэрофотосъемка и наземное лазерное сканирование
                   для получения облака точек Никольского храма
                 </p>
-              </div>
-              <div class="work-examples__item">
+              </a>
+              <a class="work-examples__item" href="#">
                 <img src="images/work-examples/item-4.jpg" alt="" />
                 <h4>Нефтегазовый комплекс</h4>
                 <p class="table-hidden">
@@ -500,7 +507,7 @@
                   Проведено наземное лазерное сканирование на объекте
                   нефтегазового комплекса для получения 3D-модели
                 </p>
-              </div>
+              </a>
             </div>
           </div>
         </div>
@@ -513,12 +520,12 @@
               <p>Гарантия качества</p>
             </div>
             <div class="advantages__item">
-              <img src="images/advanteges/item-2.svg" alt="" />
-              <p>Работа по договору</p>
-            </div>
-            <div class="advantages__item">
               <img src="images/advanteges/item-3.svg" alt="" />
               <p>Бесплатный выезд специалиста</p>
+            </div>
+            <div class="advantages__item">
+              <img src="images/advanteges/item-2.svg" alt="" />
+              <p>Работа по договору</p>
             </div>
             <div class="advantages__item">
               <img src="images/advanteges/item-4.svg" alt="" />
@@ -1023,11 +1030,11 @@
                 назначения.
               </p>
               <p>
-                Основной принцип сканирования заключается в измерении расстояния
-                от сканера до поверхности объекта с высокой скоростью - до
-                миллиона точек в секунду. Одновременно с этим, выполняется
-                регистрация вертикальных и горизонтальных углов. В результате
-                этих действий получается облако точек, которое затем
+                <span>Основной принцип сканирования</span> заключается в
+                измерении расстояния от сканера до поверхности объекта с высокой
+                скоростью - до миллиона точек в секунду. Одновременно с этим,
+                выполняется регистрация вертикальных и горизонтальных углов. В
+                результате этих действий получается облако точек, которое затем
                 обрабатывается в специализированном программном обеспечении.
               </p>
               <p>
@@ -1040,9 +1047,9 @@
                 обслуживание зданий.
               </p>
               <p>
-                Помимо высокой степени автоматизации, геодезическое лазерное
-                сканирование 3Д обладает также следующими достоинствами по
-                отношению...
+                <span>Помимо высокой степени автоматизации</span> ,
+                геодезическое лазерное сканирование 3Д обладает также следующими
+                достоинствами по отношению...
               </p>
               <p>
                 Наземное лазерное сканирование позволяет составить трехмерное
@@ -1068,7 +1075,7 @@
                 информацией, что существенно упрощает проектирование и
                 обслуживание зданий.
               </p>
-              <a class="main-text__show-more" href="#">Читать далее</a>
+              <a class="main-text__show-more" href="#">Читать полностью</a>
             </div>
           </div>
         </div>

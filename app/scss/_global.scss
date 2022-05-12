@@ -51,9 +51,13 @@ ul:not([class]) {
    line-height: 20px;
    @extend %rob-700;
    cursor: pointer;
+   transition: all 0.3s;
 }
-.header__top-menu li.active {
-   a {
+.btn:hover {
+   background-color: #136cb6;
+}
+.header__top-menu li {
+   a.active {
       @extend %rob-700;
       border-radius: 1px;
       border-bottom: 2px solid #fff;
@@ -242,7 +246,21 @@ div.popup.phone-call-back {
 .questions .content li {
    margin-bottom: 30px;
 }
+.capitalize {
+   text-transform: lowercase;
+}
+
+.first-block {
+   &__inner {
+      height: 400px;
+   }
+}
 @media (max-width: 1200px) {
+   .first-block {
+      &__inner {
+         height: 224px;
+      }
+   }
    .header__bottom-menu .hidden {
       display: none;
    }
@@ -396,6 +414,11 @@ div.popup.phone-call-back {
       }
    }
 }
+.first-block {
+   &__inner {
+      padding-left: 64px !important;
+   }
+}
 @media (max-width: 500px) {
    .form-block.popup {
       max-width: 100%;
@@ -406,6 +429,18 @@ div.popup.phone-call-back {
    }
    .form-block-popup {
       overflow-y: scroll;
+   }
+   .first-block {
+      &__inner {
+         padding-left: 32px !important;
+      }
+   }
+}
+@media (max-width: 449px) {
+   .first-block {
+      &__inner {
+         height: 184px;
+      }
    }
 }
 

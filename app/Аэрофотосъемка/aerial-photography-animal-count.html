@@ -37,7 +37,6 @@
           background-size: 159%;
         }
         .last-page.animal-count .first-block__inner h1 {
-          margin-bottom: 16px;
           max-width: 480px;
         }
         .last-page.animal-count .first-block__inner p {
@@ -51,6 +50,9 @@
             rgba(132, 132, 132, 0) 99.59%,
             rgba(255, 255, 255, 0) 99.6%
           );
+        }
+        .last-page.aerial-photography .main-text{
+          margin-top: 38px;
         }
       }
 
@@ -79,7 +81,7 @@
           background-size: 220%;
         }
         .last-page.aerial-photography .main-text {
-          margin-top: 100px;
+          margin-top: 48px;
         }
       }
     </style>
@@ -297,30 +299,31 @@
             <div class="how-work__item">
               <div class="how-work__item-number">1</div>
               <p>
-                Cоставляем и согласовываем сметы<br />
-                и тех. задания с заказчиком
+                Cоставляем и согласовываем<br />
+                ТЗ и сметы с заказчиком
               </p>
               <p class="mobile-visible">
-                Cоставляем и согласовываем сметы и ТЗ с заказчиком
+                Cоставляем и согласовываем сметы и тех. задания с заказчиком
               </p>
             </div>
             <div class="how-work__item">
               <div class="how-work__item-number">2</div>
-              <p>Собираем и анализируем документацию на объект</p>
+              <p>Получение разрешения на полёт</p>
             </div>
             <div class="how-work__item">
               <div class="how-work__item-number">3</div>
-              <p>Выполняем полевые обмерные работы</p>
+              <p class="aeh">Выполнение полевых (аэрофотосъемочных) работ</p>
+              <p class="aeb">Выполнение полевых работ</p>
             </div>
             <div class="how-work__item">
               <div class="how-work__item-number">4</div>
-              <p>Обрабатываем и анализируем всю полученную информацию</p>
+              <p>Выполнение камеральных работ</p>
             </div>
             <div class="how-work__item">
               <div class="how-work__item-number">5</div>
               <p>
-                Получаем результат в виде облака точек, обмерных чертежей или
-                3D-модели
+                Результат в виде фотоснимков, ЦМР и ЦММ, ортофотоплана, облака
+                точек и топографического плана
               </p>
             </div>
             <div class="how-work__item">
@@ -338,7 +341,7 @@
                   />
                 </svg>
               </div>
-              <p>Передаём материалы по объекту заказчику</p>
+              <p>Передача материалов заказчику</p>
             </div>
           </div>
         </div>
@@ -357,7 +360,8 @@
                   src="../images/aerial-photography/work-examples-item-1.jpg"
                   alt=""
                 />
-                <h4>Деревня Чижово, Ивановская область</h4>
+                <h4 class="table-hidden">Деревня Чижово, Ивановская область</h4>
+                <h4 class="desc-hidden">Деревня Чижово, Ивановская обл.</h4>
                 <p class="table-hidden">
                   С помощью БПЛА Supercam S350 и GPS- приёмника Trimble R10 были
                   получены: ортофотоплан и топографический план масштаба 1:500 в
@@ -395,7 +399,8 @@
                   src="../images/aerial-photography/work-examples-item-3.jpg"
                   alt=""
                 />
-                <h4>Храм Казанской иконы Божьей матери</h4>
+                <h4 class="table-hidden">Храм Казанской иконы Божьей матери</h4>
+                <h4 class="desc-hidden">Никольский храм</h4>
                 <p class="table-hidden">
                   С помощью квадрокоптера DJI Matrice 300 RTK были произведены
                   аэрофотосъемочные и видеосъемочные работы, что в вместе с
@@ -698,8 +703,8 @@
                       >обработку персональных данных</a
                     >
                   </label>
-                  <button class="btn" type="submit">Отправить заявку</button>
                 </div>
+                <button class="btn" type="submit">Отправить заявку</button>
               </form>
             </div>
           </div>
@@ -728,96 +733,95 @@
           </div>
         </div>
       </section>
-    </main>
-    <footer class="footer">
-      <div class="container">
-        <div class="footer__inner">
-          <div class="footer__item">
-            <img
-              class="footer__item-logo"
-              alt=""
-              src="../images/logo-footer.svg"
-            />
-            <p>Продажа и обслуживание геодезического оборудования</p>
-          </div>
-          <div class="footer__item footer__item-info">
-            <a class="footer__item-title" href="#">Наши услуги</a>
-            <ul class="footer__item-list d-flex">
-              <li><a href="#">Наземное лазерное сканирование</a></li>
-              <li><a href="#">Аэрофотосъёмка</a></li>
-              <li><a href="#">Инженерные изыскания</a></li>
-              <li><a href="#">Картография</a></li>
-              <li><a href="#">Землеустройство</a></li>
-            </ul>
-          </div>
-          <div class="footer__item footer__item-info">
-            <a class="footer__item-title" href="#">Информация для клиентов</a>
-            <ul class="footer__item-list">
-              <li><a href="#">О компании</a></li>
-              <li><a href="#">Контакты</a></li>
-              <li><a href="#">Проекты</a></li>
-              <li><a href="#">Заказчики</a></li>
-              <li><a href="#">Лицензии</a></li>
-            </ul>
-          </div>
-          <div class="footer__item footer__item-contact">
-            <a class="footer__item-title" href="#">Связаться с нами</a>
-            <ul>
-              <li class="footer__item-location">
-                <p>г. Москва, ул. Коминтерна, д.7, к.2</p>
-              </li>
-              <li class="footer__item-phone">
-                <a href="tel:+74956040000">8 495 604 00 00</a>
-              </li>
-              <li class="footer__item-phone">
-                <a href="tel:+78005053598">8 800 505 35 98</a>
-              </li>
-              <li class="footer__item-mail">
-                <a href="mailto:geo@rusgeocom.ru">geo@rusgeocom.ru</a>
-              </li>
-            </ul>
-            <div class="footer__item-social">
-              <ul>
-                <li>
-                  <a href="#"><img src="../images/vk.svg" alt="" /></a>
-                </li>
-                <li>
-                  <a href="#"><img src="../images/telegram.svg" alt="" /></a>
-                </li>
-                <li>
-                  <a href="#"><img src="../images/ya_zen.svg" alt="" /></a>
-                </li>
-                <li>
-                  <a href="#"><img src="../images/subtract.svg" alt="" /></a>
-                </li>
-                <li>
-                  <a href="#"><img src="../images/youtube.svg" alt="" /></a>
-                </li>
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__inner">
+            <div class="footer__item">
+              <img
+                class="footer__item-logo"
+                alt=""
+                src="../images/logo-footer.svg"
+              />
+              <a href="#">Продажа и обслуживание геодезического оборудования</a>
+            </div>
+            <div class="footer__item footer__item-info">
+              <p class="footer__item-title">Наши услуги</p>
+              <ul class="footer__item-list d-flex">
+                <li><a href="#">Наземное лазерное сканирование</a></li>
+                <li><a href="#">Аэрофотосъёмка</a></li>
+                <li><a href="#">Инженерные изыскания</a></li>
+                <li><a href="#">Картография</a></li>
+                <li><a href="#">Землеустройство</a></li>
               </ul>
             </div>
+            <div class="footer__item footer__item-info">
+              <p class="footer__item-title">Информация для клиентов</p>
+              <ul class="footer__item-list">
+                <li><a href="#">О компании</a></li>
+                <li><a href="#">Контакты</a></li>
+                <li><a href="#">Проекты</a></li>
+                <li><a href="#">Заказчики</a></li>
+                <li><a href="#">Лицензии</a></li>
+              </ul>
+            </div>
+            <div class="footer__item footer__item-contact">
+              <p class="footer__item-title">Связаться с нами</p>
+              <ul>
+                <li class="footer__item-location">
+                  <p>г. Москва, ул. Коминтерна, д.7, к.2</p>
+                </li>
+                <li class="footer__item-phone">
+                  <a href="tel:+74956040000">8 495 604 00 00</a>
+                </li>
+                <li class="footer__item-phone">
+                  <a href="tel:+78005053598">8 800 505 35 98</a>
+                </li>
+                <li class="footer__item-mail">
+                  <a href="mailto:geo@rusgeocom.ru">geo@rusgeocom.ru</a>
+                </li>
+              </ul>
+              <div class="footer__item-social">
+                <ul>
+                  <li>
+                    <a href="#"><img src="../images/vk.svg" alt="" /></a>
+                  </li>
+                  <li>
+                    <a href="#"><img src="../images/telegram.svg" alt="" /></a>
+                  </li>
+                  <li>
+                    <a href="#"><img src="../images/ya_zen.svg" alt="" /></a>
+                  </li>
+                  <li>
+                    <a href="#"><img src="../images/subtract.svg" alt="" /></a>
+                  </li>
+                  <li>
+                    <a href="#"><img src="../images/youtube.svg" alt="" /></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copy">
+            <a href="#">Перейти на полную версию сайта</a>
+            <p>
+              <svg
+                width="9"
+                height="22"
+                viewBox="0 0 9 22"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5.717 12.7855C5.587 12.8808 5.43317 12.9523 5.2555 13C5.07783 13.052 4.8915 13.078 4.6965 13.078C4.44517 13.078 4.23283 13.039 4.0595 12.961C3.88617 12.8787 3.74317 12.7638 3.6305 12.6165C3.52217 12.4648 3.442 12.285 3.39 12.077C3.34233 11.8647 3.3185 11.6307 3.3185 11.375C3.3185 10.8247 3.43983 10.4043 3.6825 10.114C3.92517 9.81933 4.274 9.672 4.729 9.672C4.937 9.672 5.1125 9.68933 5.2555 9.724C5.40283 9.75433 5.535 9.79983 5.652 9.8605L5.5025 10.309C5.40283 10.2527 5.29233 10.2093 5.171 10.179C5.04967 10.1443 4.91967 10.127 4.781 10.127C4.16567 10.127 3.858 10.543 3.858 11.375C3.858 11.5397 3.87317 11.6978 3.9035 11.8495C3.93817 11.9968 3.99233 12.129 4.066 12.246C4.144 12.3587 4.24367 12.4497 4.365 12.519C4.49067 12.5883 4.6445 12.623 4.8265 12.623C4.9825 12.623 5.12117 12.5992 5.2425 12.5515C5.36817 12.5038 5.47 12.4497 5.548 12.389L5.717 12.7855Z"
+                  fill="#999999"
+                />
+                <circle cx="4.5" cy="11.5" r="4" stroke="#999999" />
+              </svg>
+              Русгеоком, 2006-2022
+            </p>
           </div>
         </div>
-        <div class="footer-copy">
-          <a href="#">Перейти на полную версию сайта</a>
-          <p>
-            <svg
-              width="9"
-              height="22"
-              viewBox="0 0 9 22"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M5.717 12.7855C5.587 12.8808 5.43317 12.9523 5.2555 13C5.07783 13.052 4.8915 13.078 4.6965 13.078C4.44517 13.078 4.23283 13.039 4.0595 12.961C3.88617 12.8787 3.74317 12.7638 3.6305 12.6165C3.52217 12.4648 3.442 12.285 3.39 12.077C3.34233 11.8647 3.3185 11.6307 3.3185 11.375C3.3185 10.8247 3.43983 10.4043 3.6825 10.114C3.92517 9.81933 4.274 9.672 4.729 9.672C4.937 9.672 5.1125 9.68933 5.2555 9.724C5.40283 9.75433 5.535 9.79983 5.652 9.8605L5.5025 10.309C5.40283 10.2527 5.29233 10.2093 5.171 10.179C5.04967 10.1443 4.91967 10.127 4.781 10.127C4.16567 10.127 3.858 10.543 3.858 11.375C3.858 11.5397 3.87317 11.6978 3.9035 11.8495C3.93817 11.9968 3.99233 12.129 4.066 12.246C4.144 12.3587 4.24367 12.4497 4.365 12.519C4.49067 12.5883 4.6445 12.623 4.8265 12.623C4.9825 12.623 5.12117 12.5992 5.2425 12.5515C5.36817 12.5038 5.47 12.4497 5.548 12.389L5.717 12.7855Z"
-                fill="#999999"
-              />
-              <circle cx="4.5" cy="11.5" r="4" stroke="#999999" />
-            </svg>
-            Русгеоком, 2006-2022
-          </p>
-        </div>
-      </div>
-    </footer>
+      </footer>
 
     <div class="form-block-popup calculate-project hidden">
       <div class="form-block popup">
@@ -904,8 +908,8 @@
                 >политикой обработки персональных данных</a
               >
             </label>
-            <button class="btn" type="submit">Отправить заявку</button>
           </div>
+          <button class="btn" type="submit">Отправить заявку</button>
         </form>
       </div>
     </div>
@@ -962,8 +966,8 @@
                 >политикой обработки персональных данных</a
               >
             </label>
-            <button class="btn" type="submit">Отправить заявку</button>
           </div>
+          <button class="btn" type="submit">Отправить заявку</button>
         </form>
       </div>
     </div>

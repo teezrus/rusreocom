@@ -38,8 +38,8 @@
           background-size: cover;
         }
         .last-page.energy-infrastructure .first-block__inner h1 {
-          margin-bottom: 16px;
-          max-width: 480px;
+          margin-bottom: 32px;
+          max-width: 590px;
         }
         .last-page.energy-infrastructure .first-block__inner p {
           margin-bottom: 16px;
@@ -52,6 +52,9 @@
             rgba(132, 132, 132, 0) 99.59%,
             rgba(255, 255, 255, 0) 99.6%
           );
+        }
+        .last-page.aerial-photography .main-text {
+          margin-top: 32px;
         }
       }
 
@@ -68,6 +71,7 @@
         .last-page.energy-infrastructure .first-block__inner {
           background-position: right;
           background-size: cover;
+          padding-right: 5px;
         }
       }
       @media (max-width: 449px) {
@@ -80,7 +84,7 @@
           background-size: cover;
         }
         .last-page.aerial-photography .main-text {
-          margin-top: 100px;
+          margin-top: 48px;
         }
       }
     </style>
@@ -300,30 +304,31 @@
             <div class="how-work__item">
               <div class="how-work__item-number">1</div>
               <p>
-                Cоставляем и согласовываем сметы<br />
-                и тех. задания с заказчиком
+                Cоставляем и согласовываем<br />
+                ТЗ и сметы с заказчиком
               </p>
               <p class="mobile-visible">
-                Cоставляем и согласовываем сметы и ТЗ с заказчиком
+                Cоставляем и согласовываем сметы и тех. задания с заказчиком
               </p>
             </div>
             <div class="how-work__item">
               <div class="how-work__item-number">2</div>
-              <p>Собираем и анализируем документацию на объект</p>
+              <p>Получение разрешения на полёт</p>
             </div>
             <div class="how-work__item">
               <div class="how-work__item-number">3</div>
-              <p>Выполняем полевые обмерные работы</p>
+              <p class="aeh">Выполнение полевых (аэрофотосъемочных) работ</p>
+              <p class="aeb">Выполнение полевых работ</p>
             </div>
             <div class="how-work__item">
               <div class="how-work__item-number">4</div>
-              <p>Обрабатываем и анализируем всю полученную информацию</p>
+              <p>Выполнение камеральных работ</p>
             </div>
             <div class="how-work__item">
               <div class="how-work__item-number">5</div>
               <p>
-                Получаем результат в виде облака точек, обмерных чертежей или
-                3D-модели
+                Результат в виде фотоснимков, ЦМР и ЦММ, ортофотоплана, облака
+                точек и топографического плана
               </p>
             </div>
             <div class="how-work__item">
@@ -341,7 +346,7 @@
                   />
                 </svg>
               </div>
-              <p>Передаём материалы по объекту заказчику</p>
+              <p>Передача материалов заказчику</p>
             </div>
           </div>
         </div>
@@ -360,7 +365,8 @@
                   src="../images/aerial-photography/work-examples-item-1.jpg"
                   alt=""
                 />
-                <h4>Деревня Чижово, Ивановская область</h4>
+                <h4 class="table-hidden">Деревня Чижово, Ивановская область</h4>
+                <h4 class="desc-hidden">Деревня Чижово, Ивановская обл.</h4>
                 <p class="table-hidden">
                   С помощью БПЛА Supercam S350 и GPS- приёмника Trimble R10 были
                   получены: ортофотоплан и топографический план масштаба 1:500 в
@@ -398,7 +404,8 @@
                   src="../images/aerial-photography/work-examples-item-3.jpg"
                   alt=""
                 />
-                <h4>Храм Казанской иконы Божьей матери</h4>
+                <h4 class="table-hidden">Храм Казанской иконы Божьей матери</h4>
+                <h4 class="desc-hidden">Никольский храм</h4>
                 <p class="table-hidden">
                   С помощью квадрокоптера DJI Matrice 300 RTK были произведены
                   аэрофотосъемочные и видеосъемочные работы, что в вместе с
@@ -701,8 +708,8 @@
                       >обработку персональных данных</a
                     >
                   </label>
-                  <button class="btn" type="submit">Отправить заявку</button>
                 </div>
+                <button class="btn" type="submit">Отправить заявку</button>
               </form>
             </div>
           </div>
@@ -741,10 +748,10 @@
               alt=""
               src="../images/logo-footer.svg"
             />
-            <p>Продажа и обслуживание геодезического оборудования</p>
+            <a href="#">Продажа и обслуживание геодезического оборудования</a>
           </div>
           <div class="footer__item footer__item-info">
-            <a class="footer__item-title" href="#">Наши услуги</a>
+            <p class="footer__item-title">Наши услуги</p>
             <ul class="footer__item-list d-flex">
               <li><a href="#">Наземное лазерное сканирование</a></li>
               <li><a href="#">Аэрофотосъёмка</a></li>
@@ -754,7 +761,7 @@
             </ul>
           </div>
           <div class="footer__item footer__item-info">
-            <a class="footer__item-title" href="#">Информация для клиентов</a>
+            <p class="footer__item-title">Информация для клиентов</p>
             <ul class="footer__item-list">
               <li><a href="#">О компании</a></li>
               <li><a href="#">Контакты</a></li>
@@ -764,7 +771,7 @@
             </ul>
           </div>
           <div class="footer__item footer__item-contact">
-            <a class="footer__item-title" href="#">Связаться с нами</a>
+            <p class="footer__item-title">Связаться с нами</p>
             <ul>
               <li class="footer__item-location">
                 <p>г. Москва, ул. Коминтерна, д.7, к.2</p>
@@ -907,8 +914,8 @@
                 >политикой обработки персональных данных</a
               >
             </label>
-            <button class="btn" type="submit">Отправить заявку</button>
           </div>
+          <button class="btn" type="submit">Отправить заявку</button>
         </form>
       </div>
     </div>
@@ -965,8 +972,8 @@
                 >политикой обработки персональных данных</a
               >
             </label>
-            <button class="btn" type="submit">Отправить заявку</button>
           </div>
+          <button class="btn" type="submit">Отправить заявку</button>
         </form>
       </div>
     </div>

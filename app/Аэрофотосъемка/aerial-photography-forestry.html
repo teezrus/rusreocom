@@ -14,7 +14,7 @@
           right;
         background-position: 125px 0px;
         display: flex;
-        align-items:center
+        align-items: center;
       }
       .last-page.forestry .first-block__inner h1 {
         margin-bottom: 32px;
@@ -33,11 +33,11 @@
       }
       @media (max-width: 1200px) {
         .last-page.forestry .first-block__inner {
-          background-position: -18px -5px;
-          background-size: 109%;
+          background-position: 0;
+          background-size: cover;
         }
         .last-page.forestry .first-block__inner h1 {
-          margin-bottom: 16px;
+          margin-bottom: 32px;
           max-width: 500px;
         }
         .last-page.forestry .first-block__inner p {
@@ -80,6 +80,12 @@
         }
         .info-tabs {
           margin-top: 100px;
+        }
+        .last-page .questions__item:first-child .questions__name {
+          border-top: 2px solid #f2f2f2;
+        }
+        .last-page.aerial-photography .how-work h2 {
+          margin-bottom: 24px;
         }
       }
     </style>
@@ -537,30 +543,31 @@
             <div class="how-work__item">
               <div class="how-work__item-number">1</div>
               <p>
-                Cоставляем и согласовываем сметы<br />
-                и тех. задания с заказчиком
+                Cоставляем и согласовываем<br />
+                ТЗ и сметы с заказчиком
               </p>
               <p class="mobile-visible">
-                Cоставляем и согласовываем сметы и ТЗ с заказчиком
+                Cоставляем и согласовываем сметы и тех. задания с заказчиком
               </p>
             </div>
             <div class="how-work__item">
               <div class="how-work__item-number">2</div>
-              <p>Собираем и анализируем документацию на объект</p>
+              <p>Получение разрешения на полёт</p>
             </div>
             <div class="how-work__item">
               <div class="how-work__item-number">3</div>
-              <p>Выполняем полевые обмерные работы</p>
+              <p class="aeh">Выполнение полевых (аэрофотосъемочных) работ</p>
+              <p class="aeb">Выполнение полевых работ</p>
             </div>
             <div class="how-work__item">
               <div class="how-work__item-number">4</div>
-              <p>Обрабатываем и анализируем всю полученную информацию</p>
+              <p>Выполнение камеральных работ</p>
             </div>
             <div class="how-work__item">
               <div class="how-work__item-number">5</div>
               <p>
-                Получаем результат в виде облака точек, обмерных чертежей или
-                3D-модели
+                Результат в виде фотоснимков, ЦМР и ЦММ, ортофотоплана, облака
+                точек и топографического плана
               </p>
             </div>
             <div class="how-work__item">
@@ -578,94 +585,97 @@
                   />
                 </svg>
               </div>
-              <p>Передаём материалы по объекту заказчику</p>
+              <p>Передача материалов заказчику</p>
             </div>
           </div>
         </div>
-        <section class="work-examples">
-          <div class="container">
-            <div class="work-examples__inner">
-              <div class="work-examples__top">
-                <h2 class="work-examples__title">Примеры работ</h2>
-                <button class="table-hidden">Все</button>
-                <button class="desc-hidden">Смотреть все</button>
-              </div>
-              <div class="work-examples__items">
-                <a class="work-examples__item" href="#">
-                  <img
-                    src="../images/aerial-photography/work-examples-item-1.jpg"
-                    alt=""
-                  />
-                  <h4>Деревня Чижово, Ивановская область</h4>
-                  <p class="table-hidden">
-                    С помощью БПЛА Supercam S350 и GPS- приёмника Trimble R10 были
-                    получены: ортофотоплан и топографический план масштаба 1:500 в
-                    местной системе координат.
-                  </p>
-                  <p class="desc-hidden">
-                    С помощью БПЛА Supercam S350 и GPS- приёмника Trimble R10
-                    получены ортофотоплан и топографический план
-                  </p>
-                </a>
-                <a class="work-examples__item" href="#">
-                  <img
-                    src="../images/aerial-photography/work-examples-item-2.jpg"
-                    alt=""
-                  />
-                  <h4 class="table-hidden">
-                    Церковь Спаса Нерукотворного Образа
-                  </h4>
-                  <h4 class="desc-hidden">Московские триумфальные ворота</h4>
-                  <p class="table-hidden">
-                    С помощью квадрокоптера DJI Phantom 4 RTK были произведены
-                    аэрофотосъемочные и видеосъемочные работы, в результате
-                    которых заказчик получил короткометражный видеоролик и
-                    панорамные снимки храма.
-                  </p>
-                  <p class="desc-hidden">
-                    Произведены аэрофото- и видеосъемочные работы храма для
-                    получения панорамных снимков и видео
-                  </p>
-                </a>
-              </div>
-              <div class="work-examples__items">
-                <a class="work-examples__item" href="#">
-                  <img
-                    src="../images/aerial-photography/work-examples-item-3.jpg"
-                    alt=""
-                  />
-                  <h4>Храм Казанской иконы Божьей матери</h4>
-                  <p class="table-hidden">
-                    С помощью квадрокоптера DJI Matrice 300 RTK были произведены
-                    аэрофотосъемочные и видеосъемочные работы, что в вместе с
-                    наземным лазерным сканированием, дало заказчику облако точек в
-                    формате ReCap, видеоролик и панорамные снимки храма.
-                  </p>
-                  <p class="desc-hidden">
-                    С помощью квадрокоптера DJI Matrice 300 RTK были произведены
-                    аэрофотосъемочные и видеосъемочные работы
-                  </p>
-                </a>
-                <a class="work-examples__item" href="#">
-                  <img
-                    src="../images/aerial-photography/work-examples-item-4.jpg"
-                    alt=""
-                  />
-                  <h4>ПГТ Шаховская</h4>
-                  <p class="table-hidden">
-                    С помощью БПЛА Supercam S350 и GPS- приёмника Trimble R10 были
-                    получен ортофотоплан в местной системе координат для
-                    выполнения кадастровых работ.
-                  </p>
-                  <p class="desc-hidden">
-                    С помощью БПЛА Supercam S350 и GPS- приёмника Trimble R10 были
-                    получен ортофотоплан для выполнения кадастровых работ.
-                  </p>
-                </a>
-              </div>
+      </section>
+      <section class="work-examples">
+        <div class="container">
+          <div class="work-examples__inner">
+            <div class="work-examples__top">
+              <h2 class="work-examples__title">Примеры работ</h2>
+              <button class="table-hidden">Все</button>
+              <button class="desc-hidden">Смотреть все</button>
+            </div>
+            <div class="work-examples__items">
+              <a class="work-examples__item" href="#">
+                <img
+                  src="../images/aerial-photography/work-examples-item-1.jpg"
+                  alt=""
+                />
+                <h4 class="table-hidden">Деревня Чижово, Ивановская область</h4>
+                <h4 class="desc-hidden">Деревня Чижово, Ивановская обл.</h4>
+                <p class="table-hidden">
+                  С помощью БПЛА Supercam S350 и GPS- приёмника Trimble R10 были
+                  получены: ортофотоплан и топографический план масштаба 1:500 в
+                  местной системе координат.
+                </p>
+                <p class="desc-hidden">
+                  С помощью БПЛА Supercam S350 и GPS- приёмника Trimble R10
+                  получены ортофотоплан и топографический план
+                </p>
+              </a>
+              <a class="work-examples__item" href="#">
+                <img
+                  src="../images/aerial-photography/work-examples-item-2.jpg"
+                  alt=""
+                />
+                <h4 class="table-hidden">
+                  Церковь Спаса Нерукотворного Образа
+                </h4>
+                <h4 class="desc-hidden">Московские триумфальные ворота</h4>
+                <p class="table-hidden">
+                  С помощью квадрокоптера DJI Phantom 4 RTK были произведены
+                  аэрофотосъемочные и видеосъемочные работы, в результате
+                  которых заказчик получил короткометражный видеоролик и
+                  панорамные снимки храма.
+                </p>
+                <p class="desc-hidden">
+                  Произведены аэрофото- и видеосъемочные работы храма для
+                  получения панорамных снимков и видео
+                </p>
+              </a>
+            </div>
+            <div class="work-examples__items">
+              <a class="work-examples__item" href="#">
+                <img
+                  src="../images/aerial-photography/work-examples-item-3.jpg"
+                  alt=""
+                />
+                <h4 class="table-hidden">Храм Казанской иконы Божьей матери</h4>
+                <h4 class="desc-hidden">Никольский храм</h4>
+                <p class="table-hidden">
+                  С помощью квадрокоптера DJI Matrice 300 RTK были произведены
+                  аэрофотосъемочные и видеосъемочные работы, что в вместе с
+                  наземным лазерным сканированием, дало заказчику облако точек в
+                  формате ReCap, видеоролик и панорамные снимки храма.
+                </p>
+                <p class="desc-hidden">
+                  С помощью квадрокоптера DJI Matrice 300 RTK были произведены
+                  аэрофотосъемочные и видеосъемочные работы
+                </p>
+              </a>
+              <a class="work-examples__item" href="#">
+                <img
+                  src="../images/aerial-photography/work-examples-item-4.jpg"
+                  alt=""
+                />
+                <h4>ПГТ Шаховская</h4>
+                <p class="table-hidden">
+                  С помощью БПЛА Supercam S350 и GPS- приёмника Trimble R10 были
+                  получен ортофотоплан в местной системе координат для
+                  выполнения кадастровых работ.
+                </p>
+                <p class="desc-hidden">
+                  С помощью БПЛА Supercam S350 и GPS- приёмника Trimble R10 были
+                  получен ортофотоплан для выполнения кадастровых работ.
+                </p>
+              </a>
             </div>
           </div>
-        </section>
+        </div>
+      </section>
       <section class="used-equipment">
         <div class="container">
           <h2>Используемое оборудование</h2>
@@ -937,8 +947,8 @@
                       >обработку персональных данных</a
                     >
                   </label>
-                  <button class="btn" type="submit">Отправить заявку</button>
                 </div>
+                <button class="btn" type="submit">Отправить заявку</button>
               </form>
             </div>
           </div>
@@ -977,10 +987,10 @@
               alt=""
               src="../images/logo-footer.svg"
             />
-            <p>Продажа и обслуживание геодезического оборудования</p>
+            <a href="#">Продажа и обслуживание геодезического оборудования</a>
           </div>
           <div class="footer__item footer__item-info">
-            <a class="footer__item-title" href="#">Наши услуги</a>
+            <p class="footer__item-title">Наши услуги</p>
             <ul class="footer__item-list d-flex">
               <li><a href="#">Наземное лазерное сканирование</a></li>
               <li><a href="#">Аэрофотосъёмка</a></li>
@@ -990,7 +1000,7 @@
             </ul>
           </div>
           <div class="footer__item footer__item-info">
-            <a class="footer__item-title" href="#">Информация для клиентов</a>
+            <p class="footer__item-title">Информация для клиентов</p>
             <ul class="footer__item-list">
               <li><a href="#">О компании</a></li>
               <li><a href="#">Контакты</a></li>
@@ -1000,7 +1010,7 @@
             </ul>
           </div>
           <div class="footer__item footer__item-contact">
-            <a class="footer__item-title" href="#">Связаться с нами</a>
+            <p class="footer__item-title">Связаться с нами</p>
             <ul>
               <li class="footer__item-location">
                 <p>г. Москва, ул. Коминтерна, д.7, к.2</p>
@@ -1143,8 +1153,8 @@
                 >политикой обработки персональных данных</a
               >
             </label>
-            <button class="btn" type="submit">Отправить заявку</button>
           </div>
+          <button class="btn" type="submit">Отправить заявку</button>
         </form>
       </div>
     </div>
@@ -1201,8 +1211,8 @@
                 >политикой обработки персональных данных</a
               >
             </label>
-            <button class="btn" type="submit">Отправить заявку</button>
           </div>
+          <button class="btn" type="submit">Отправить заявку</button>
         </form>
       </div>
     </div>

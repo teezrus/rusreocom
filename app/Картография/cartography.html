@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>cartography</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"
+    />
     <link rel="stylesheet" href="../phone/intlTelInput.min.css" />
 
     <link rel="stylesheet" href="../css/style.min.css" />
@@ -14,6 +18,9 @@
         background-position: center -10px;
         display: flex;
         align-items: center;
+      }
+      .main-text__info {
+        height: auto;
       }
       .cartography .big-one-image__content {
         display: block;
@@ -294,8 +301,8 @@
                 является необходимым условием возможности проведения любых
                 работ, связанных с осуществлением мониторинга земель.
               </p>
-              <p style="font-weight: 700">
-                Основными видами картографических работ являются:
+              <p>
+                <span>Основными видами картографических работ являются:</span>
               </p>
               <ul>
                 <li>
@@ -495,10 +502,10 @@
                       >обработку персональных данных</a
                     >
                   </label>
-                  <button class="btn" type="submit">
-                    Заказать обратный звонок
-                  </button>
                 </div>
+                <button class="btn" type="submit">
+                  Заказать обратный звонок
+                </button>
               </form>
             </div>
           </div>
@@ -510,24 +517,28 @@
           <div class="licenses__items">
             <div class="licenses__item">
               <img
+                data-fancybox
                 src="../images/engineering-survey/licenses-item-1.jpg"
                 alt=""
               />
             </div>
             <div class="licenses__item">
               <img
+                data-fancybox
                 src="../images/engineering-survey/licenses-item-2.jpg"
                 alt=""
               />
             </div>
             <div class="licenses__item">
               <img
+                data-fancybox
                 src="../images/engineering-survey/licenses-item-3.jpg"
                 alt=""
               />
             </div>
             <div class="licenses__item">
               <img
+                data-fancybox
                 src="../images/engineering-survey/licenses-item-4.jpg"
                 alt=""
               />
@@ -546,10 +557,10 @@
               alt=""
               src="../images/logo-footer.svg"
             />
-            <p>Продажа и обслуживание геодезического оборудования</p>
+            <a href="#">Продажа и обслуживание геодезического оборудования</a>
           </div>
           <div class="footer__item footer__item-info">
-            <a class="footer__item-title" href="#">Наши услуги</a>
+            <p class="footer__item-title">Наши услуги</p>
             <ul class="footer__item-list d-flex">
               <li><a href="#">Наземное лазерное сканирование</a></li>
               <li><a href="#">Аэрофотосъёмка</a></li>
@@ -559,7 +570,7 @@
             </ul>
           </div>
           <div class="footer__item footer__item-info">
-            <a class="footer__item-title" href="#">Информация для клиентов</a>
+            <p class="footer__item-title">Информация для клиентов</p>
             <ul class="footer__item-list">
               <li><a href="#">О компании</a></li>
               <li><a href="#">Контакты</a></li>
@@ -569,7 +580,7 @@
             </ul>
           </div>
           <div class="footer__item footer__item-contact">
-            <a class="footer__item-title" href="#">Связаться с нами</a>
+            <p class="footer__item-title">Связаться с нами</p>
             <ul>
               <li class="footer__item-location">
                 <p>г. Москва, ул. Коминтерна, д.7, к.2</p>
@@ -711,8 +722,8 @@
                 >политикой обработки персональных данных</a
               >
             </label>
-            <button class="btn" type="submit">Отправить заявку</button>
           </div>
+          <button class="btn" type="submit">Отправить заявку</button>
         </form>
       </div>
     </div>
@@ -769,11 +780,13 @@
                 >политикой обработки персональных данных</a
               >
             </label>
-            <button class="btn" type="submit">Отправить заявку</button>
           </div>
+          <button class="btn" type="submit">Отправить заявку</button>
         </form>
       </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+
     <script src="../js/main.min.js"></script>
     <!-- Скрипты для телефона -->
     <script src="../phone/intlTelInput.min.js"></script>

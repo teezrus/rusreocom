@@ -15,18 +15,28 @@
          max-width: 72px;
       }
       &__bottom-menu {
-         padding: 12px 0 2px;
+         padding: 8px 0 2px;
       }
+      &__bottom {
+         position: relative;
+         top: -1px;
+      }
+   }
+   .header__top-inner {
+      padding: 4px 0 6px;
    }
    .footer {
       &__inner {
          flex-wrap: wrap;
-         padding-bottom: 48px;
+         padding-bottom: 32px;
       }
       &__item:first-child {
          max-width: 100%;
          width: 100%;
          margin-bottom: 40px;
+         a {
+            font-size: 14px;
+         }
       }
       .footer__item-logo {
          width: 88px;
@@ -34,6 +44,9 @@
    }
 }
 @media (max-width: 920px) {
+   .header__top-menu {
+      margin-right: auto;
+   }
    .header__top {
       & form {
          display: block;
@@ -107,6 +120,9 @@
          height: 20px;
          margin-bottom: 16px;
       }
+      &__item-social li {
+         margin-right: 12px;
+      }
    }
    .footer-copy {
       display: block;
@@ -116,8 +132,14 @@
          line-height: 20px;
       }
       p {
+         margin-top: 8px;
          font-size: 12px;
          line-height: 16px;
+         display: flex;
+         align-items: center;
+         svg {
+            margin-right: 2px;
+         }
       }
    }
    .footer__item:first-child p {
@@ -132,6 +154,33 @@
 }
 
 @media (max-width: 767px) {
+   .where-applicable div h2 {
+      margin-bottom: 12px;
+   }
+   .form-block.popup {
+      border-radius: 0;
+      .file {
+         width: auto;
+      }
+   }
+   .engineering-survey {
+      .form-block .privat-policy {
+         max-width: 270px;
+      }
+      .form-block .form-block__inner .form-block__left {
+         padding-bottom: 24px;
+      }
+   }
+   .main-text p {
+      font-size: 14px;
+   }
+   .header__bottom {
+      padding: 20px 0 10px;
+   }
+   .header__bottom-menu {
+      margin: 0;
+      padding: 0 0 10px 0;
+   }
    .container {
       padding: 0 24px;
    }
@@ -196,6 +245,9 @@
       }
       .search-btn {
          padding-right: 0;
+         svg path {
+            stroke: #fff;
+         }
       }
       .menu-mobile {
          display: block;
@@ -203,7 +255,8 @@
    }
    .header__bottom {
       position: relative;
-      top: 45px;
+      top: 40px;
+      padding: 16px 0 10px;
       &-menu {
          overflow-x: scroll;
       }
@@ -212,7 +265,7 @@
       }
    }
    .main {
-      margin-top: 46px;
+      margin-top: 50px;
    }
    .last-page {
       .header__bottom {
@@ -236,7 +289,7 @@
          display: flex;
          align-items: center;
          margin-bottom: 24px;
-         .footer__item-logo + p {
+         .footer__item-logo + a {
             font-size: 14px;
             line-height: 20px;
             margin: 0;
@@ -269,6 +322,20 @@
 // media header and footer and
 
 @media (max-width: 1500px) {
+   .aerial-photography,
+   .engineering-survey,
+   .cartography,
+   .land-management,
+   .about-company,
+   .licenses-and-customers,
+   .our-project {
+      .title.table-hidden {
+         font-size: 24px;
+      }
+      .form-block__title {
+         font-size: 24px;
+      }
+   }
    .how-work {
       &__items::after {
          width: 82.5%;
@@ -308,6 +375,54 @@
 }
 
 @media (max-width: 1200px) {
+   .engineering-survey .form-block__title,
+   .cartography .form-block__title,
+   .land-management .form-block__title,
+   .about-company .form-block__title,
+   .licenses-and-customers .form-block__title,
+   .our-projects .form-block__title {
+      margin-bottom: 12px;
+   }
+   .aerial-photography,
+   .engineering-survey,
+   .cartography,
+   .land-management,
+   .about-company,
+   .licenses-and-customers,
+   .our-project {
+      .title.table-hidden {
+         font-size: 28px;
+      }
+      .form-block__title {
+         font-size: 28px;
+      }
+   }
+   .last-page,
+   .first-block__inner {
+      .btn {
+         max-width: 248px;
+         height: 40px;
+         font-size: 14px;
+         line-height: 26px;
+         padding: 5px;
+      }
+   }
+   .last-page.ts {
+      .how-work {
+         &__items {
+            margin-top: 0;
+         }
+         h2 {
+            margin-bottom: 0;
+         }
+      }
+      .form-block__left {
+         display: none;
+      }
+      .form-block .form {
+         margin-top: 24px;
+      }
+   }
    .big-one-image {
       height: 280px;
       &__content {
@@ -373,18 +488,17 @@
    }
    .services {
       &__items {
-         flex-wrap: wrap;
+         grid-template-columns: repeat(2, 2fr);
+         gap: 16px;
       }
       &__item {
-         max-width: 49%;
          width: 100%;
          box-shadow: 1px 5px 22px 1px rgba(94, 111, 122, 0.1);
          margin-right: 0;
-         margin-bottom: 16px;
       }
       &__item-title {
          font-family: "Roboto-Medium", sans-serif;
-         font-weight: 500;
+         font-weight: 600;
          font-size: 16px;
          line-height: 24px;
          margin: 16px 0 12px;
@@ -409,7 +523,7 @@
          font-size: 12px;
          line-height: 16px;
       }
-      &__btn {
+      &__btn.call-back-btn {
          padding: 10px 34px;
          white-space: nowrap;
          font-weight: 600;
@@ -420,7 +534,7 @@
          font-size: 16px;
          line-height: 24px;
          font-family: "Roboto-Medium", sans-serif;
-         font-weight: 500;
+         font-weight: 600;
       }
    }
    .work-examples {
@@ -515,15 +629,15 @@
          font-size: 28px;
       }
       .title + p {
-         font-size: 16px;
+         font-size: 14px;
       }
-      .file + p,
-      li {
+      .file + p {
          font-size: 12px;
       }
       li {
          line-height: 20px;
          margin-bottom: 12px;
+         font-size: 14px;
       }
       ul {
          margin: 12px 0 24px 20px;
@@ -545,12 +659,14 @@
          margin-bottom: 64px;
       }
       .form__textarea {
-         margin-bottom: 6px;
+         margin-bottom: 8px;
       }
    }
    .questions {
       &__name {
          font-size: 16px;
+         padding-top: 16px;
+         padding-bottom: 16px;
       }
       p {
          font-size: 14px;
@@ -605,7 +721,7 @@
          font-size: 16px;
          margin-bottom: 16px;
          font-family: "Roboto-Medium", sans-serif;
-         font-weight: 500;
+         font-weight: 600;
       }
       &__items {
          display: flex;
@@ -663,15 +779,21 @@
          line-height: 24px;
          color: #1c77c3;
       }
+      &__items {
+         grid-template-columns: repeat(2, 1fr);
+         gap: 16px;
+      }
       &__item {
          box-shadow: 1px 5px 22px 1px rgba(94, 111, 122, 0.1);
-         margin: 8px;
-         max-width: 31%;
+      }
+      h2 {
+         margin-bottom: 24px;
       }
    }
    .survey-types {
       img {
          margin: 0 auto;
+         width: 100%;
       }
       &__items {
          justify-content: center;
@@ -695,16 +817,7 @@
          font-size: 14px;
       }
    }
-   .last-page,
-   .first-block__inner {
-      .btn {
-         max-width: 248px;
-         height: 40px;
-         font-size: 14px;
-         line-height: 26px;
-         padding: 5px;
-      }
-   }
+
    .last-page {
       .first-block {
          &__inner::after {
@@ -721,6 +834,9 @@
       &__items {
          margin-bottom: 16px;
       }
+      h2 + &__item:first-child {
+         margin-bottom: 0;
+      }
       &__item {
          max-width: 100px;
          img {
@@ -732,6 +848,9 @@
             line-height: 16px;
          }
       }
+   }
+   .clients h2 + .clients__items {
+      margin-bottom: 0;
    }
    .contacts {
       &__inner {
@@ -782,27 +901,19 @@
          display: flex;
          flex-direction: column;
       }
+      &__items {
+         display: grid;
+         gap: 16px;
+         grid-template-columns: repeat(2, 1fr);
+      }
+      &__title + p {
+         height: auto;
+      }
       &__item {
-         max-width: 48%;
-         padding: 24px;
-         margin: 0 0px 16px 0px;
          border-radius: 16px;
          transition: all 0.3s;
          min-height: 378px;
          box-shadow: 1px 5px 22px 1px rgba(94, 111, 122, 0.1);
-      }
-      &__item:nth-child(3n) {
-         margin: 0 16px 16px 16px;
-      }
-      &__item:first-child,
-      &__item:nth-child(4n) {
-         margin: 0 16px 16px 16px;
-      }
-      &__item:nth-child(2n) {
-         margin-right: 0;
-      }
-      &__item:nth-child(n) {
-         margin-left: 0;
       }
       img {
          height: 200px;
@@ -820,7 +931,7 @@
          font-size: 16px;
       }
       &__filters {
-         margin-bottom: 32px;
+         margin-bottom: 22px;
          display: flex;
          overflow-x: scroll;
          padding-bottom: 10px;
@@ -839,7 +950,6 @@
          display: flex;
          justify-content: center;
          margin: 24px 0 0px;
-         background-color: #fafafa;
          order: 1;
       }
       .tablet-hidden {
@@ -849,6 +959,7 @@
          display: block;
       }
    }
+
    .pagination {
       margin-top: 32px;
    }
@@ -923,6 +1034,211 @@
       left: 43%;
       filter: brightness(0.5);
    }
+   .header__top-number {
+      margin-right: 12px;
+   }
+   .work-examples__items + .work-examples__items {
+      margin-top: 0px;
+   }
+   .advantages__item img {
+      max-width: 48px;
+   }
+   .aerial-photography,
+   .engineering-survey,
+   .cartography,
+   .land-management,
+   .about-company,
+   .licenses-and-customers,
+   .our-project {
+      .form-block__left {
+         padding-bottom: 28px;
+      }
+   }
+   .gallery__items {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      a {
+         img {
+            width: 100%;
+         }
+      }
+   }
+   .similar-works h2 {
+      margin-bottom: 24px;
+   }
+   .our-projects {
+      .form-block__left {
+         margin-bottom: 0;
+      }
+      .form-block .form {
+         margin: 28px auto 48px;
+      }
+   }
+   .clients__item {
+      margin: 16px 0;
+      p {
+         align-items: flex-start;
+      }
+   }
+   .licenses-and-customers .licenses {
+      margin-top: 32px;
+   }
+   .licenses-and-customers .form-block__inner .form-block__left {
+      margin-bottom: 0;
+   }
+   .contacts .footer {
+      margin-top: 96px;
+   }
+   .about-company .main-text {
+      margin-top: 32px;
+   }
+   .about-company {
+      .advantages {
+         margin-top: 36px;
+      }
+      .main-text {
+         margin-bottom: 36px;
+      }
+      .main-text {
+         p,
+         li {
+            font-size: 14px;
+         }
+      }
+      .clients h2 {
+         margin-bottom: 24px;
+      }
+      .form-block__left {
+         margin-bottom: 0;
+      }
+      .form-block__title {
+         margin-bottom: 12px;
+      }
+   }
+   .land-management {
+      .info-tabs {
+         margin-top: 32px;
+      }
+      .form-block__left {
+         margin-bottom: 0;
+      }
+      .form-block__title {
+         margin-bottom: 12px;
+      }
+      .main-text {
+         display: none;
+      }
+      .licenses {
+         margin-bottom: 0;
+      }
+   }
+   .cartography {
+      .main-text {
+         margin: 39px 0 48px;
+         h2 {
+            font-size: 16px;
+            line-height: 24px;
+            margin-bottom: 16px;
+         }
+         &__info,
+         li {
+            font-size: 14px;
+            line-height: 160%;
+         }
+      }
+      .advantages {
+         margin-top: 48px;
+      }
+      .form-block__left {
+         margin-bottom: 0;
+      }
+      .form-block .form {
+         margin: 0 auto 48px;
+      }
+   }
+   .main-text p {
+      margin-bottom: 16px;
+   }
+   .engineering-survey {
+      .survey-types {
+         margin-bottom: 64px;
+         h2 {
+            margin-bottom: 24px;
+            font-size: 28px;
+            line-height: 32px;
+         }
+         &__title {
+            max-width: 89%;
+         }
+      }
+      .advantages {
+         margin-top: 64px;
+      }
+      .main-text {
+         h2 {
+            margin-bottom: 16px;
+         }
+         p,
+         li {
+            font-size: 14px;
+            line-height: 22.4px;
+         }
+         &__info {
+            height: 484px;
+         }
+      }
+      .form-block__left {
+         margin-bottom: 0px;
+      }
+   }
+   .engineering-survey {
+      &.last-page {
+         .info-tabs {
+            margin-top: 32px;
+         }
+         .clients {
+            h2 {
+               margin-bottom: 8px;
+            }
+         }
+
+         .main-text h2 {
+            max-width: 515px;
+         }
+         .footer {
+            margin-top: 80px;
+         }
+      }
+   }
+   .terrestrial-scanning {
+      .used-equipment,
+      .software {
+         h2 {
+            margin-bottom: 24px;
+         }
+      }
+      .how-work {
+         h2 {
+            margin-bottom: 0px;
+         }
+         &__items {
+            margin-top: 0px;
+         }
+      }
+      .services {
+         &__item {
+            box-shadow: 1px 5px 16px 1px rgba(94, 111, 122, 0.1);
+         }
+      }
+      .main-text__info {
+         height: 393px;
+      }
+      .main-text__inner {
+         h2 {
+            font-size: 32px;
+         }
+      }
+   }
 }
 @media (max-width: 1100px) {
    .survey-types {
@@ -937,6 +1253,46 @@
       }
       &__item:nth-child(2n) {
          margin-right: 0;
+      }
+   }
+   .aerial-photography .form-block__inner .form-block__left {
+      margin-bottom: 0;
+   }
+   .last-page.aerial-photography {
+      .main-text {
+         margin-bottom: 48px;
+         p {
+            font-size: 14px;
+            line-height: 22.4px;
+         }
+         .main-text__title {
+            font-size: 16px;
+            line-height: 24px;
+         }
+      }
+      .how-work {
+         margin-top: 48px;
+         h2 {
+            margin-bottom: 0px;
+         }
+         &__items {
+            margin-top: 0px;
+         }
+      }
+   }
+   .aerial-photography {
+      .how-work {
+         h2 {
+            margin-bottom: 0px;
+         }
+      }
+   }
+   .back-call {
+      box-shadow: none;
+   }
+   .ts.last-page {
+      .advantages {
+         background-color: #f6f7f9;
       }
    }
 }
@@ -1044,7 +1400,7 @@
       .licence__block {
          margin-top: 24px;
       }
-      .privat-policy + .btn {
+      .licence__block + .btn {
          margin-top: 28px;
       }
    }
@@ -1064,16 +1420,11 @@
    }
    .where-applicable {
       &__item {
-         max-width: 48%;
-         margin: 0 16px 16px 0;
          width: 100%;
          padding: 24px;
          border-radius: 16px;
          transition: all 0.3s;
          box-shadow: 1px 5px 22px 1px rgba(94, 111, 122, 0.1);
-      }
-      &__item:nth-child(2n) {
-         margin-right: 0;
       }
    }
    .aerial-photography,
@@ -1145,18 +1496,17 @@
       h1 {
          max-width: 550px;
       }
-   }
-   .gallery__items {
-      a {
-         max-width: 49%;
+      .form-block .form {
+         margin: 0px auto 48px;
       }
    }
+
    .similar-works {
       &__items {
-         flex-wrap: wrap;
+         grid-template-columns: repeat(2, 1fr);
+         gap: 16px;
       }
       &__item {
-         max-width: 49%;
          box-shadow: 1px 5px 22px 1px rgba(94, 111, 122, 0.1);
       }
       &__item:nth-child(2) {
@@ -1173,11 +1523,142 @@
    }
 }
 @media (max-width: 767px) {
+   .last-page.ts {
+      .how-work {
+         h2 {
+            margin-bottom: 24px;
+         }
+      }
+   }
+
+   .last-page.aerial-photography {
+      .how-work {
+         h2 {
+            margin-bottom: 24px;
+         }
+      }
+   }
+   .aerial-photography {
+      .how-work {
+         h2 {
+            margin-bottom: 24px;
+         }
+      }
+      .aeb {
+         display: block;
+      }
+      .aeh {
+         display: none;
+      }
+   }
+   .terrestrial-scanning .main-text__inner h2 {
+      font-size: 18px;
+      line-height: 24px;
+   }
+   .main-text__show-more {
+      font-size: 14px;
+   }
+   .terrestrial-scanning {
+      .main {
+         margin-top: 40px;
+      }
+      .how-work h2 {
+         margin-bottom: 24px;
+      }
+      .back-call__btn.btn {
+         font-size: 12px;
+      }
+      .form-block .input__file {
+         font-size: 14px;
+      }
+   }
+
+   .aerial-photography {
+      .form-block {
+         padding-top: 24px;
+         .title {
+            font-size: 18px;
+            line-height: 24px;
+         }
+         .title.desc-hidden {
+            font-size: 18px;
+            line-height: 24px;
+         }
+         .desc-hidden {
+            font-size: 14px;
+         }
+      }
+      .main-text h2 {
+         margin-bottom: 12px;
+      }
+
+      .form-block__inner .form-block__left {
+         padding-bottom: 24px;
+      }
+   }
+   .contacts {
+      h1 {
+         font-size: 18px;
+         margin-bottom: 24px;
+      }
+      .main {
+         margin-top: 40px;
+      }
+      &__item:nth-child(2) p + p {
+         position: relative;
+         top: -8px;
+      }
+   }
+   .our-project .form-block .form {
+      margin-bottom: 24px;
+   }
+   .project-description__inner span {
+      margin-bottom: 5px;
+   }
+   .similar-works {
+      display: none;
+   }
+   .gallery__items {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 24px;
+   }
+   .back-call {
+      box-shadow: none;
+   }
+   .work-examples__title {
+      font-size: 18px;
+   }
+   .form-block .form__holder {
+      margin-bottom: 12px;
+   }
+   .form-block .form__label {
+      margin-bottom: 8px;
+   }
+   .our-project .form-block__left {
+      padding-bottom: 24px;
+   }
+   .our-project .form-block .form {
+      margin-top: 0;
+   }
+   .our-project .form-block .licence__block {
+      margin-top: 24px;
+   }
+   .project-description__inner p {
+      font-size: 14px;
+   }
+   .our-project .form-block {
+      padding-top: 24px;
+   }
+   .questions h2 {
+      font-size: 18px;
+      line-height: 24px;
+   }
    .form-block .licence__block {
       margin-top: 22px;
    }
-   .form-block .privat-policy + .btn {
+   .form-block .licence__block + .btn {
       margin-top: 24px;
+      font-size: 14px;
    }
    .has-image[data-image-fit="contain"] .fancybox__image {
       padding: 0px;
@@ -1222,13 +1703,15 @@
    .category {
       padding: 0;
       &__items {
-         flex-wrap: wrap;
+         grid-template-columns: repeat(2, 1fr);
+         gap: 8px;
          margin-top: 24px;
       }
       &__item {
          padding: 16px 0;
-         width: 49%;
-         margin: 10px 0;
+      }
+      &__item:nth-child(2n) {
+         margin-right: 0;
       }
       p {
          font-weight: 600;
@@ -1331,7 +1814,7 @@
             margin-top: 0px;
          }
          .title {
-            margin-bottom: 12px;
+            margin-bottom: 8px;
          }
       }
       padding: 0;
@@ -1377,7 +1860,7 @@
          line-height: 20px;
       }
       &__name svg {
-         top: 23px;
+         top: 15px;
       }
       p {
          font-size: 14px;
@@ -1385,9 +1868,6 @@
       }
    }
 
-   .main-text__show-more {
-      bottom: 3px;
-   }
    .how-work,
    .services,
    .category,
@@ -1506,6 +1986,9 @@
    }
    .licenses {
       margin: 48px 0;
+      h2 {
+         margin-bottom: 12px;
+      }
       &__items {
          flex-wrap: wrap;
       }
@@ -1519,6 +2002,14 @@
       }
       &__item:not(:nth-child(2n)) {
          margin-right: 8px;
+      }
+   }
+   .licenses-and-customers {
+      .form-block__left {
+         padding-bottom: 24px;
+      }
+      .footer {
+         margin-top: 30px;
       }
    }
    .completed-projects__item {
@@ -1543,7 +2034,112 @@
       line-height: 20px;
    }
    .our-project .form-block {
-      margin-bottom: 96px;
+      margin-bottom: 0px;
+   }
+   .form-block .privat-policy,
+   .form-block .privat-policy a {
+      font-size: 14px;
+   }
+   .form-block .privat-policy {
+      padding-left: 24px;
+      max-width: 190px;
+   }
+   .licence__block input + label::before {
+      width: 16px;
+      height: 16px;
+      border-radius: 4px;
+      background-color: transparent;
+      top: 3px;
+   }
+   .licence__block input:checked + label::before {
+      background-position: 3px 4px;
+   }
+   .land-management {
+      .clients {
+         margin-bottom: 0;
+         &__items {
+            margin-bottom: 0;
+         }
+      }
+      .clients h2 {
+         margin-bottom: 9px;
+      }
+      .form-block {
+         margin-top: 0px;
+      }
+      .form-block .form-block__inner .form-block__left {
+         padding-bottom: 24px;
+      }
+   }
+   .cartography {
+      .main-text {
+         margin-top: 82px;
+         h2 {
+            font-size: 18px;
+            margin-bottom: 12px;
+            max-width: 87%;
+         }
+      }
+      .advantages {
+         margin-top: 16px;
+      }
+      .main-text {
+         margin-bottom: 16px;
+      }
+      .clients h2 {
+         margin-bottom: 9px;
+      }
+      .clients__items {
+         margin-bottom: 0;
+      }
+      .form-block__left {
+         padding-bottom: 24px;
+         margin-bottom: 0;
+      }
+      .form-block .form {
+         margin-bottom: 24px;
+      }
+   }
+   .big-one-image .btn {
+      font-size: 12px !important;
+   }
+}
+@media (max-width: 600px) {
+   .work-examples__items {
+      flex-wrap: wrap;
+   }
+   .work-examples__item {
+      margin-right: 0;
+      margin-bottom: 24px;
+   }
+   .work-examples__item h4 {
+      color: #1c77c3;
+      margin: 12px 0 8px;
+   }
+   .work-examples img {
+      height: 148px;
+   }
+   .work-examples__top {
+      margin-bottom: 12px;
+   }
+   .work-examples {
+      margin-bottom: 24px;
+   }
+   .back-call {
+      margin-bottom: 48px;
+   }
+   .completed-projects {
+      &__items {
+         display: grid;
+         gap: 16px;
+         grid-template-columns: repeat(1, 1fr);
+      }
+   }
+   .services {
+      &__items {
+         grid-template-columns: repeat(1, 1fr);
+         gap: 24px;
+      }
    }
 }
 @media (max-width: 555px) {
@@ -1604,11 +2200,18 @@
       }
    }
    .where-applicable {
+      &__items {
+         grid-template-columns: 1fr;
+         gap: 24px;
+      }
       &__item {
          max-width: 100%;
       }
       h3 {
          padding: 12px 0 8px;
+      }
+      img {
+         margin: auto;
       }
    }
    .aerial-photography {
@@ -1636,7 +2239,7 @@
    }
    .completed-projects {
       margin-top: 48px;
-      margin-bottom: 64px;
+      margin-bottom: 48px;
       &__inner {
          display: flex;
          flex-direction: column;
@@ -1644,41 +2247,33 @@
       &__item {
          max-width: 100%;
          padding: 24px;
-         margin: 0 0px 16px 0px;
-         border-radius: 16px;
+         border-radius: 8px;
          transition: all 0.3s;
          height: auto;
          box-shadow: 1px 5px 22px 1px rgba(94, 111, 122, 0.1);
       }
       img {
-         height: 140px;
+         height: 148px;
          object-fit: cover;
          width: 100%;
          border-radius: 8px;
-      }
-      &__item:nth-child(3n) {
-         margin: 0 0px 16px 0px;
-      }
-      &__item:first-child,
-      &__item:nth-child(4n) {
-         margin: 0 0px 16px 0px;
-      }
-      &__item:nth-child(2n) {
-         margin: 0 0px 16px 0px;
-      }
-      &__item:nth-child(n) {
-         margin: 0 0px 16px 0px;
       }
       &__title {
          margin: 12px 0 8px;
       }
 
       &__filters {
-         margin-bottom: 24px;
+         margin-bottom: 14px;
       }
       &__show-more {
          margin: 16px 0 0px;
       }
+   }
+   .completed-projects__title.desc-hidden {
+      color: #1c77c3;
+   }
+   .completed-projects__show-more {
+      padding: 6px;
    }
    .our-project {
       h1 {
@@ -1687,16 +2282,27 @@
          margin-bottom: 24px;
       }
    }
+   .our-projects {
+      .form-block {
+         padding-top: 24px;
+      }
+      .form-block .licence__block {
+         margin-top: 24px;
+      }
+      .form-block .form {
+         margin: 24px auto;
+      }
+   }
    .pagination {
       margin-top: 24px;
    }
-   .similar-works {
-      display: none;
-   }
+
    .gallery__items a {
       max-width: 100%;
+      margin-right: 0;
       img {
          margin: auto;
+         border-radius: 12px;
       }
    }
    .project-description {
@@ -1705,6 +2311,37 @@
 }
 
 @media (max-width: 449px) {
+   .form-block-popup.calculate-project,
+   .form-block-poup.call-back {
+      .form-block.popup {
+         margin: 0;
+      }
+   }
+   .engineering-survey {
+      &.last-page {
+         .questions__item:first-child a {
+            border-top: 2px solid #f2f2f2;
+         }
+         .info-tabs {
+            margin-top: 98px;
+         }
+         .clients h2 {
+            margin-bottom: 10px;
+         }
+         .form-block {
+            margin-top: 10px;
+            &__title {
+               max-width: 310px;
+            }
+         }
+         .clients {
+            margin-bottom: 15px;
+            &__items {
+               margin-bottom: 0;
+            }
+         }
+      }
+   }
    .big-one-image {
       height: 184px;
       &__content {
@@ -1721,6 +2358,15 @@
          margin-top: 85px;
       }
    }
+   .survey-types img {
+      margin: 0 auto;
+      width: 100%;
+      height: 148px;
+      object-fit: cover;
+   }
+   .engineering-survey .survey-types__item:last-child {
+      margin-bottom: 0;
+   }
    .category {
       padding-top: 65px;
    }
@@ -1733,9 +2379,6 @@
             display: block;
          }
       }
-   }
-   .main-text__show-more {
-      bottom: 5px;
    }
    .first-block {
       &__inner {
@@ -1824,7 +2467,7 @@
          padding: 10px;
       }
       .contacts__form.desc-hidden .form {
-         margin-bottom: 96px;
+         margin: 24px 0 0;
       }
       .map {
          height: 416px;
@@ -1832,10 +2475,23 @@
       }
       .contacts__form .form-block__title {
          font-size: 18px;
+         line-height: 20px;
       }
    }
    .last-page.aerial-photography .main-text {
       margin-top: 92px;
+   }
+   .about-company {
+      .main-text {
+         margin-top: 90px;
+         margin-bottom: 20px;
+      }
+      .main h2 {
+         margin-bottom: 12px;
+      }
+      .advantages {
+         margin-top: 20px;
+      }
    }
 }
 

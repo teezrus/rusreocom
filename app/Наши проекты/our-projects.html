@@ -84,7 +84,9 @@
           display: none;
         }
         .our-projects .big-one-image .desc-hidden {
-          display: none;
+          display: block;
+          color: #333333;
+          font-size: 12px;
         }
         .our-projects .big-one-image::after {
           background: linear-gradient(
@@ -96,7 +98,13 @@
           );
         }
         .big-one-image__content {
-          padding-top: 0px;
+          padding-top: 225px;
+        }
+        .big-one-image__content h1 {
+          padding-bottom: 94px;
+        }
+        .completed-projects {
+          margin-top: 188px;
         }
       }
       @media (max-width: 360px) {
@@ -270,8 +278,9 @@
             Компания «РУСГЕОКОМ» обладает всем необходимым для проведения
             сложных геодезических работ. Штат компании укомплектован
             высококвалифицированными специалистами, имеющими достаточный опыт
-            для проведения работ любой сложности, а материальная база
-            представлена новейшим оборудованием ведущих мировых производителей
+            для проведения работ любой сложности,<br />
+            а материальная база представлена новейшим оборудованием ведущих
+            мировых производителей
           </p>
         </div>
       </section>
@@ -280,23 +289,31 @@
           <h2>Выполненные проекты РУСГЕОКОМ</h2>
           <div class="completed-projects__inner">
             <div class="completed-projects__filters filters">
+              <a class="filter filter__all active" href="#all"> Все проекты </a>
               <a
-                class="filter__terrestrial-scanning"
+                class="filter filter__terrestrial-scanning"
                 href="#terrestrial-scanning"
               >
                 Наземное лазерное сканирование
               </a>
-              <a class="filter__aerial-photography" href="#aerial-photography">
+              <a
+                class="filter filter__aerial-photography"
+                href="#aerial-photography"
+              >
                 Аэрофотосъемка
               </a>
-              <a class="filter__engineering-survey" href="#engineering-survey">
+              <a
+                class="filter filter__engineering-survey"
+                href="#engineering-survey"
+              >
                 Инженерные изыскания
               </a>
-              <a class="filter__cartography" href="#cartography">Картография</a>
-              <a class="filter__land-management" href="#land-management">
+              <a class="filter filter__cartography" href="#cartography"
+                >Картография</a
+              >
+              <a class="filter filter__land-management" href="#land-management">
                 Землеустройство
               </a>
-              <a class="filter__all" href="#all"> Все проекты </a>
             </div>
             <div class="completed-projects__items">
               <a
@@ -629,19 +646,21 @@
             <div class="pagination">
               <ul class="pagination__items">
                 <li class="disabled">
-                  <svg
-                    style="transform: rotate(180deg)"
-                    width="8"
-                    height="16"
-                    viewBox="0 0 8 16"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M7.00125 8.00046C7.00171 8.23411 6.92033 8.46054 6.77125 8.64046L1.77125 14.6405C1.60151 14.8447 1.3576 14.9731 1.09318 14.9975C0.82875 15.0219 0.565469 14.9402 0.361252 14.7705C0.157035 14.6007 0.0286112 14.3568 0.00423148 14.0924C-0.0201483 13.828 0.0615132 13.5647 0.231252 13.3605L4.71125 8.00046L0.391252 2.64046C0.308186 2.53817 0.246154 2.42047 0.208723 2.29413C0.171291 2.16779 0.159197 2.0353 0.173136 1.90427C0.187075 1.77325 0.226772 1.64626 0.289946 1.53063C0.35312 1.41499 0.438525 1.31298 0.541252 1.23046C0.644073 1.13888 0.764699 1.06952 0.895573 1.02672C1.02645 0.983932 1.16475 0.96863 1.30181 0.981772C1.43887 0.994915 1.57175 1.03622 1.6921 1.1031C1.81246 1.16999 1.91771 1.26101 2.00125 1.37046L6.83125 7.37046C6.95677 7.55554 7.01662 7.77736 7.00125 8.00046Z"
-                      fill="#333333"
-                    />
-                  </svg>
+                  <a href="#">
+                    <svg
+                      style="transform: rotate(180deg)"
+                      width="8"
+                      height="16"
+                      viewBox="0 0 8 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M7.00125 8.00046C7.00171 8.23411 6.92033 8.46054 6.77125 8.64046L1.77125 14.6405C1.60151 14.8447 1.3576 14.9731 1.09318 14.9975C0.82875 15.0219 0.565469 14.9402 0.361252 14.7705C0.157035 14.6007 0.0286112 14.3568 0.00423148 14.0924C-0.0201483 13.828 0.0615132 13.5647 0.231252 13.3605L4.71125 8.00046L0.391252 2.64046C0.308186 2.53817 0.246154 2.42047 0.208723 2.29413C0.171291 2.16779 0.159197 2.0353 0.173136 1.90427C0.187075 1.77325 0.226772 1.64626 0.289946 1.53063C0.35312 1.41499 0.438525 1.31298 0.541252 1.23046C0.644073 1.13888 0.764699 1.06952 0.895573 1.02672C1.02645 0.983932 1.16475 0.96863 1.30181 0.981772C1.43887 0.994915 1.57175 1.03622 1.6921 1.1031C1.81246 1.16999 1.91771 1.26101 2.00125 1.37046L6.83125 7.37046C6.95677 7.55554 7.01662 7.77736 7.00125 8.00046Z"
+                        fill="#333333"
+                      />
+                    </svg>
+                  </a>
                 </li>
                 <li class="active"><a href="#">1</a></li>
                 <li><a href="#">2</a></li>
@@ -720,10 +739,10 @@
                       >обработку персональных данных</a
                     >
                   </label>
-                  <button class="btn" type="submit">
-                    Заказать обратный звонок
-                  </button>
                 </div>
+                <button class="btn" type="submit">
+                  Заказать обратный звонок
+                </button>
               </form>
             </div>
           </div>
@@ -833,10 +852,10 @@
               alt=""
               src="../images/logo-footer.svg"
             />
-            <p>Продажа и обслуживание геодезического оборудования</p>
+            <a href="#">Продажа и обслуживание геодезического оборудования</a>
           </div>
           <div class="footer__item footer__item-info">
-            <a class="footer__item-title" href="#">Наши услуги</a>
+            <p class="footer__item-title">Наши услуги</p>
             <ul class="footer__item-list d-flex">
               <li><a href="#">Наземное лазерное сканирование</a></li>
               <li><a href="#">Аэрофотосъёмка</a></li>
@@ -846,7 +865,7 @@
             </ul>
           </div>
           <div class="footer__item footer__item-info">
-            <a class="footer__item-title" href="#">Информация для клиентов</a>
+            <p class="footer__item-title">Информация для клиентов</p>
             <ul class="footer__item-list">
               <li><a href="#">О компании</a></li>
               <li><a href="#">Контакты</a></li>
@@ -856,7 +875,7 @@
             </ul>
           </div>
           <div class="footer__item footer__item-contact">
-            <a class="footer__item-title" href="#">Связаться с нами</a>
+            <p class="footer__item-title">Связаться с нами</p>
             <ul>
               <li class="footer__item-location">
                 <p>г. Москва, ул. Коминтерна, д.7, к.2</p>
@@ -998,8 +1017,8 @@
                 >политикой обработки персональных данных</a
               >
             </label>
-            <button class="btn" type="submit">Отправить заявку</button>
           </div>
+          <button class="btn" type="submit">Отправить заявку</button>
         </form>
       </div>
     </div>
@@ -1056,8 +1075,8 @@
                 >политикой обработки персональных данных</a
               >
             </label>
-            <button class="btn" type="submit">Отправить заявку</button>
           </div>
+          <button class="btn" type="submit">Отправить заявку</button>
         </form>
       </div>
     </div>

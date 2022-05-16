@@ -45,6 +45,9 @@
           margin-bottom: 32px;
           max-width: 390px;
         }
+        .scan-objects__item {
+          padding: 0 8px;
+        }
       }
       @media (max-width: 767px) {
         .energetics .first-block__inner {
@@ -77,7 +80,7 @@
       }
     </style>
   </head>
-  <body class="energetics">
+  <body class="energetics terrestrial-scanning">
     <header class="header">
       <div class="header__top">
         <div class="container">
@@ -690,8 +693,8 @@
                       >обработку персональных данных</a
                     >
                   </label>
-                  <button class="btn" type="submit">Отправить заявку</button>
                 </div>
+                <button class="btn" type="submit">Отправить заявку</button>
               </form>
             </div>
           </div>
@@ -704,7 +707,7 @@
             <div class="questions__items">
               <div class="questions__item">
                 <a
-                  class="questions__name"
+                  class="questions__name active"
                   href="javascript:;"
                   onclick="toggle_visibility('section1');"
                   >Какие главные цели проведения лазерного сканирования?
@@ -960,11 +963,11 @@
                 назначения.
               </p>
               <p>
-                Основной принцип сканирования заключается в измерении расстояния
-                от сканера до поверхности объекта с высокой скоростью - до
-                миллиона точек в секунду. Одновременно с этим, выполняется
-                регистрация вертикальных и горизонтальных углов. В результате
-                этих действий получается облако точек, которое затем
+                <span>Основной принцип сканирования</span> заключается в
+                измерении расстояния от сканера до поверхности объекта с высокой
+                скоростью - до миллиона точек в секунду. Одновременно с этим,
+                выполняется регистрация вертикальных и горизонтальных углов. В
+                результате этих действий получается облако точек, которое затем
                 обрабатывается в специализированном программном обеспечении.
               </p>
               <p>
@@ -1021,10 +1024,10 @@
               alt=""
               src="../images/logo-footer.svg"
             />
-            <p>Продажа и обслуживание геодезического оборудования</p>
+            <a href="#">Продажа и обслуживание геодезического оборудования</a>
           </div>
           <div class="footer__item footer__item-info">
-            <a class="footer__item-title" href="#">Наши услуги</a>
+            <p class="footer__item-title">Наши услуги</p>
             <ul class="footer__item-list d-flex">
               <li><a href="#">Наземное лазерное сканирование</a></li>
               <li><a href="#">Аэрофотосъёмка</a></li>
@@ -1034,7 +1037,7 @@
             </ul>
           </div>
           <div class="footer__item footer__item-info">
-            <a class="footer__item-title" href="#">Информация для клиентов</a>
+            <p class="footer__item-title">Информация для клиентов</p>
             <ul class="footer__item-list">
               <li><a href="#">О компании</a></li>
               <li><a href="#">Контакты</a></li>
@@ -1044,7 +1047,7 @@
             </ul>
           </div>
           <div class="footer__item footer__item-contact">
-            <a class="footer__item-title" href="#">Связаться с нами</a>
+            <p class="footer__item-title">Связаться с нами</p>
             <ul>
               <li class="footer__item-location">
                 <p>г. Москва, ул. Коминтерна, д.7, к.2</p>
@@ -1186,8 +1189,8 @@
                 >политикой обработки персональных данных</a
               >
             </label>
-            <button class="btn" type="submit">Отправить заявку</button>
           </div>
+          <button class="btn" type="submit">Отправить заявку</button>
         </form>
       </div>
     </div>
@@ -1244,8 +1247,8 @@
                 >политикой обработки персональных данных</a
               >
             </label>
-            <button class="btn" type="submit">Отправить заявку</button>
           </div>
+          <button class="btn" type="submit">Отправить заявку</button>
         </form>
       </div>
     </div>

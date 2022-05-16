@@ -3,19 +3,25 @@ document.addEventListener("DOMContentLoaded", function () {
     open();
   };
   let menuMobile = document.querySelector(".menu-mobile"),
-    menuBtn = document.querySelector(".menu-btn");
+    menuBtn = document.querySelector(".menu-btn"),
+    menuMobileTop = menuMobile.querySelector(".menu-mobile__top"),
+    menuMobileBottom = menuMobile.querySelector(".menu-mobile__bottom"),
+    menuMobileInfo = menuMobile.querySelector(".menu-mobile__info");
   footerContact = document.querySelector(".footer__item-contact");
+
   function open() {
     document.addEventListener("click", (e) => {
-      const withinBoundaries = e.composedPath().includes(menuMobile);
       const withinBoundariess = e.composedPath().includes(menuBtn);
-      // footerUlLi.forEach((item) => {
-      //   item.style.cssText = "z-index:-1";
-      // });
+      const withinBoundariesss = e.composedPath().includes(menuMobileTop);
+      const withinBoundariessss = e.composedPath().includes(menuMobileBottom);
+      const withinBoundariesssss = e.composedPath().includes(menuMobileInfo);
       if (
-        !withinBoundaries &&
+        // !withinBoundaries &&
         menuMobile.classList.contains("menu-mobile--active") &&
-        !withinBoundariess
+        !withinBoundariess &
+          !withinBoundariesss &
+          !withinBoundariessss &
+          !withinBoundariesssss
       ) {
         menuMobile.classList.remove("menu-mobile--active");
         menuBtn.classList.remove("active");
@@ -155,6 +161,13 @@ $(".questions__name").on("click", function (event) {
     $(this).toggleClass("active");
   }
 });
+$(".filter").on("click", function (event) {
+  $(this).toggleClass("active");
+  if ($(this).hasClass("active")) {
+    $(".filter").removeClass("active");
+    $(this).toggleClass("active");
+  }
+});
 
 if ($(".main-text__info").children().length) {
   $(".main-text__show-more").on("click", function (e) {
@@ -165,3 +178,22 @@ if ($(".main-text__info").children().length) {
 } else {
   $(".main-text__show-more").css({ display: "none" });
 }
+
+$(function () {
+  let header = $(".header");
+  let hederHeight = header.height(); // вычисляем высоту шапки
+
+  $(window).on("scroll", function () {
+    if ($(this).scrollTop() > 1) {
+      header.addClass("header_fixed");
+      $("body").css({
+        paddingTop: hederHeight + "px", // делаем отступ у body, равный высоте шапки
+      });
+    } else {
+      header.removeClass("header_fixed");
+      $("body").css({
+        paddingTop: 0, // удаляю отступ у body, равный высоте шапки
+      });
+    }
+  });
+});

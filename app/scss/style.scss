@@ -1276,6 +1276,15 @@
       margin-top: 72px;
    }
 }
+.about-company,
+.licenses-and-customers,
+.land-management,
+.cartography,
+.engineering-survey {
+   .has-image[data-image-fit="contain"] .fancybox__image {
+      padding: 0;
+   }
+}
 .licenses {
    margin: 120px 0;
    &__items {

@@ -52,6 +52,7 @@ ul:not([class]) {
    @extend %rob-700;
    cursor: pointer;
    transition: all 0.3s;
+   white-space: nowrap;
 }
 .btn:hover {
    background-color: #136cb6;
@@ -61,6 +62,138 @@ ul:not([class]) {
       @extend %rob-400;
       border-radius: 1px;
       border-bottom: 2px solid #fff;
+   }
+}
+
+.search-dropdown {
+   display: none;
+   position: absolute;
+   width: 100%;
+   top: 40px;
+   height: 100vh;
+   background-color: #fff;
+   left: 0px;
+   animation: opacit 0.3s forwards;
+   z-index: 100;
+   padding-top: 72px;
+   overflow-y: scroll;
+   padding-bottom: 160px;
+   .result {
+      font-size: 22px;
+      line-height: 24px;
+      @extend %rob-500;
+      margin-bottom: 32px;
+      display: block;
+   }
+   span {
+      color: $accent;
+   }
+   .description {
+      color: #333333;
+      display: block;
+      font-size: 16px;
+      line-height: 160%;
+      @extend %rob-400;
+      margin-top: 12px;
+   }
+}
+.header__bottom-search {
+   .search-btn.active {
+      display: none;
+   }
+   .search-btn.active + .search-close {
+      display: flex;
+      height: 30px;
+      align-items: center;
+      padding: 0;
+      padding-right: 4px;
+      padding-top: 2px;
+      cursor: pointer;
+   }
+}
+.header__top-search {
+   .search-dropdown {
+      padding-top: 0;
+   }
+   .search-input {
+      padding-top: 8px;
+      margin-bottom: 7px;
+      border: none;
+      outline: none;
+      width: 100%;
+      border-bottom: 2px solid $accent;
+   }
+   .search-input__wrapper {
+      box-shadow: 0px 5px 10px rgba(94, 111, 122, 0.05);
+      margin-bottom: 48px;
+   }
+   .title {
+      font-size: 28px;
+      line-height: 32px;
+   }
+   .result {
+      font-size: 16px;
+      line-height: 24px;
+      .description {
+         font-size: 14px;
+         line-height: 160%;
+      }
+   }
+}
+
+.search-dropdown--active {
+   display: block;
+   top: 80px;
+}
+.search-close {
+   display: none;
+}
+.header__top-search .search-btn.active {
+   display: none;
+}
+.header__top-search .search-btn.active + .search-close {
+   display: flex;
+   height: 30px;
+   padding: 0;
+}
+.search-dropdown__inner {
+   display: none;
+   animation: opacit 0.3s forwards;
+}
+@keyframes opacit {
+   0% {
+      opacity: 0;
+   }
+   100% {
+      opacity: 1;
+   }
+}
+@media (max-width: 920px) {
+   .header__top .search-btn {
+      padding: 0;
+   }
+}
+
+@media (max-width: 767px) {
+   .header__top .search-btn {
+      padding: 0;
+      margin: 0;
+   }
+   .header__top-search {
+      font-size: 18px;
+      line-height: 24px;
+      .search-input__wrapper {
+         margin-bottom: 24px;
+      }
+
+      .result {
+         margin-bottom: 24px;
+      }
+      .search-btn.active + .search-close {
+         width: 21px;
+         height: 21px;
+         justify-content: flex-end;
+      }
    }
 }
 
@@ -400,7 +533,13 @@ section:last-child {
       margin-bottom: 10px;
    }
 }
-
+@media (max-width: 920px) {
+   .header__top .search-close {
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+   }
+}
 @media (max-width: 767px) {
    .questions .content li {
       margin-bottom: 5px;
@@ -502,7 +641,11 @@ section:last-child {
       }
    }
 }
-
+@media (min-width: 920px) and (max-width: 1200px) {
+   .search-dropdown {
+      top: 40px !important;
+   }
+}
 @media (max-width: 500px) {
    .form-block.popup {
       max-width: 100%;

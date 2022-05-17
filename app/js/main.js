@@ -133,6 +133,79 @@ function toggle_visibility(id) {
   }
 }
 
+const searchDivBottom = document.querySelector(
+    ".header__bottom-search .search-dropdown"
+  ),
+  searchInputBottom = document.querySelector(
+    ".header__bottom-search .search-input"
+  ),
+  searchBtnCloseBottom = document.querySelector(
+    ".header__bottom-search .search-close"
+  ),
+  searchBtnBottom = document.querySelector(
+    ".header__bottom-search .search-btn"
+  );
+
+searchInputBottom.addEventListener("input", function (e) {
+  let val = e.target.value.trim();
+  if (val.length) {
+    searchDivBottom.style.cssText = `display:block;
+    top : ${document.querySelector(".header").clientHeight}px`;
+    searchBtnBottom.classList.add("active");
+  } else {
+    searchDivBottom.style.display = "none";
+    searchBtnBottom.classList.remove("active");
+  }
+});
+searchBtnCloseBottom.onclick = function () {
+  close();
+};
+
+const searchDivTop = document.querySelector(
+    ".header__top-search .search-dropdown"
+  ),
+  searchBtnTop = document.querySelector(".header__top-search .search-btn "),
+  searchBtnClose = document.querySelector(".header__top-search .search-close");
+
+document.querySelector(".header__top-search .search-btn svg").onclick =
+  function () {
+    open();
+  };
+
+function open() {
+  searchDivTop.classList.toggle("search-dropdown--active");
+  searchBtnTop.classList.toggle("active");
+  searchDivTop.style.cssText = `top : ${
+    document.querySelector(".header__top").clientHeight
+  }px`;
+}
+searchBtnClose.onclick = function () {
+  close();
+};
+
+function close() {
+  searchDivTop.classList.toggle("search-dropdown--active");
+  searchBtnTop.classList.toggle("active");
+  searchDivBottom.style.cssText = "display:none;";
+  searchBtnBottom.classList.toggle("active");
+}
+
+const searchInputTopInner = document.querySelector(
+    ".header__top-search .search-dropdown .search-input"
+  ),
+  searchDivTopInner = document.querySelector(
+    ".header__top-search .search-dropdown .search-dropdown__inner"
+  );
+
+searchInputTopInner.addEventListener("input", function (e) {
+  let val = e.target.value.trim();
+  if (val.length) {
+    searchDivTopInner.style.cssText = "display:block;";
+  } else {
+    searchDivTopInner.style.display = "none";
+  }
+});
+
 // jquery
 
 $(".used-equipment__items").slick({
